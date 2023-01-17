@@ -1,0 +1,47 @@
+.intro_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  padding-top: 10%;
+  .intro_right {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 5% 0 5%;
+
+    .intro_title {
+      font-size: 40px;
+      font-weight: 700;
+      .profile {
+        padding-right: 5px;
+        color: #2c394b;
+      }
+    }
+    .intro_description {
+      color: grey;
+    }
+    .intro_button_container {
+      display: flex;
+      flex-direction: row;
+      width: 320px;
+      justify-content: space-evenly;
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin-right: 10px;
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
