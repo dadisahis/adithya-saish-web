@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Introduction from "../../components/introduction/Introduction";
 import Navbar from "../../components/navbar/Navbar";
 import Ripple from "../../components/ripple/Ripple";
+import Work from "../../components/work/Work";
 import "./home.scss";
 function Home() {
   // const [color, setColor] = useState("#E0144C");
@@ -15,6 +16,7 @@ function Home() {
       <div className="home_container">
         <div className="home_intro_section">
           <Introduction />
+          <Work />
         </div>
       </div>
     </div>

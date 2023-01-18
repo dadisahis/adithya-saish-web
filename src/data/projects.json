@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Sangeet",
+    "description": "It is a music app made using MERN stack",
+    "img_url": "https://raw.githubusercontent.com/dadisahis/sangeet-ui/e47e59a38b2acc0fde7ab990cf43d6917f376253/images/Play%20Component%20-%201.png",
+    "stack": [
+      "python",
+      "react",
+      "mongoDb",
+      "node.js",
+      "express.js",
+      "socket.io"
+    ],
+    "github_url": "https://github.com/dadisahis/sangeet-ui/tree/e47e59a38b2acc0fde7ab990cf43d6917f376253",
+    "live_url": "https://sangeet-music.onrender.com/"
+  },
+  {
+    "id": 2,
+    "name": "Sangeet",
+    "description": "It is a music app made using MERN stack",
+    "img_url": "https://raw.githubusercontent.com/dadisahis/sangeet-ui/e47e59a38b2acc0fde7ab990cf43d6917f376253/images/Play%20Component%20-%201.png",
+    "stack": [
+      "python",
+      "react",
+      "mongoDb",
+      "node.js",
+      "express.js",
+      "socket.io"
+    ],
+    "github_url": "https://github.com/dadisahis/sangeet-ui/tree/e47e59a38b2acc0fde7ab990cf43d6917f376253",
+    "live_url": "https://sangeet-music.onrender.com/"
+  },
+  {
+    "id": 3,
+    "name": "Sangeet",
+    "description": "It is a music app made using MERN stack",
+    "img_url": "https://raw.githubusercontent.com/dadisahis/sangeet-ui/e47e59a38b2acc0fde7ab990cf43d6917f376253/images/Play%20Component%20-%201.png",
+    "stack": [
+      "python",
+      "react",
+      "mongoDb",
+      "node.js",
+      "express.js",
+      "socket.io"
+    ],
+    "github_url": "https://github.com/dadisahis/sangeet-ui/tree/e47e59a38b2acc0fde7ab990cf43d6917f376253",
+    "live_url": "https://sangeet-music.onrender.com/"
+  }
+]
