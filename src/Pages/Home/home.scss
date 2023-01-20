@@ -8,6 +8,8 @@
   overflow-y: auto;
   background-color: #ececec;
   .home_container {
+    width: auto;
+    max-width: 1224px;
     display: flex;
     flex-direction: column;
   }
