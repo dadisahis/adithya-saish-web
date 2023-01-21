@@ -20,6 +20,27 @@
     }
   }
   .timeline_section {
-    margin-top: 10px;
+    margin-top: 20px;
+    width: 80%;
+    .title {
+      font-size: 30px;
+      font-weight: 750;
+      color: #2c394b;
+    }
+  }
+  .certification_section {
+    width: 80%;
+
+    .title {
+      font-size: 30px;
+      font-weight: 750;
+      color: #2c394b;
+    }
+    .certification_section_container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 }

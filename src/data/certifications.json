@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Azure AZ-900",
+    "issuer": "Microsoft",
+    "date": "January,2023",
+    "image": "https://swimburger.net/media/ppnn3pcl/azure.png"
+  },
+  {
+    "id": 2,
+    "name": "Azure AZ-900",
+    "issuer": "Microsoft",
+    "date": "January,2023",
+    "color": "linear-gradient(to right top,#1d375e,#244d7f,#2764a2,#247dc6,#1297eb);",
+    "image": "https://dl-staging-website.ghost.io/content/images/2021/04/LogoFiles_DeepLearning_PrimaryLogo.png"
+  },
+  {
+    "id": 3,
+    "name": "Azure AZ-900",
+    "issuer": "Microsoft",
+    "date": "January,2023",
+    "color": "background-image: linear-gradient(to right top, #195c3c, #177145, #15874d, #179e54, #1eb559);",
+    "image": "https://ict.iitk.ac.in/wp-content/uploads/ict-header-300-dpi.png"
+  }
+]

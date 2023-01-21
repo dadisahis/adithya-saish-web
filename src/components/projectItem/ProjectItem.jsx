@@ -3,7 +3,6 @@ import "./projectItem.scss";
 import { Chip } from "@mui/material";
 
 function ProjectItem(data) {
-  console.log(data.data.id);
   return (
     <div className="project_container">
       <div className="img_container">

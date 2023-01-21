@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "company_name": "Superbolter",
+    "profile_name": "Software Developer",
+    "year": "2021",
+    "timeline": "June 2020 - July 2021",
+    "location": "Bangalore, India",
+    "stack": [
+      "python",
+      "react",
+      "mongoDb",
+      "node.js",
+      "express.js",
+      "socket.io"
+    ],
+    "experience": [
+      "Set up the complete backend flow of a search and filter system using Python, AWS Lambda, Elasticsearch which helps thousands of end users look for any product they want.",
+      "Successfully Developed a Desktop App which could reverse image search within one's Local Directory using Tensowflow,keras,Kinter GUI and Firebase which saved time for 3D modelling team in looking for models with similar structure. ",
+      "Set up data ingestion pipelines for periodical updation of the catalog with more than 10k records which helped in keeping the data updated at production level using AWS Lambda, Kinesis firehose.",
+      "Set up a multiple object detection cum recommendation system that recommends visually similar products from our catalog for the multiple objects present in a single input image. It enabled end users to get a better idea on how to design a room using our companies product. ",
+      "Set up similar items recommendation system that helps end users to explore similar products which may better fit their purpose."
+    ]
+  },
+  {
+    "id": 2,
+    "company_name": "Superbolter",
+    "profile_name": "Software Developer",
+    "year": "2021",
+    "timeline": "June 2020 - July 2021",
+    "location": "Bangalore, India",
+    "stack": [
+      "python",
+      "react",
+      "mongoDb",
+      "node.js",
+      "express.js",
+      "socket.io"
+    ],
+    "experience": [
+      "Set up the complete backend flow of a search and filter system using Python, AWS Lambda, Elasticsearch which helps thousands of end users look for any product they want.",
+      "Successfully Developed a Desktop App which could reverse image search within one's Local Directory using Tensowflow,keras,Kinter GUI and Firebase which saved time for 3D modelling team in looking for models with similar structure. ",
+      "Set up data ingestion pipelines for periodical updation of the catalog with more than 10k records which helped in keeping the data updated at production level using AWS Lambda, Kinesis firehose.",
+      "Set up a multiple object detection cum recommendation system that recommends visually similar products from our catalog for the multiple objects present in a single input image. It enabled end users to get a better idea on how to design a room using our companies product. ",
+      "Set up similar items recommendation system that helps end users to explore similar products which may better fit their purpose."
+    ]
+  }
+]
