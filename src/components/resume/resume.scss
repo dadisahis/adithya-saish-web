@@ -1,46 +1,53 @@
-.resume_container {
+.resume {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1224px;
-  justify-content: center;
+  width: 100vw;
   align-items: center;
+  justify-content: center;
   margin-top: 5%;
-  .resume_title {
-    p {
-      font-size: 50px;
-      font-weight: 600;
-    }
-  }
-  .resume_subtitle {
-    margin-top: 10px;
-    p {
-      text-align: center;
-      color: gray;
-    }
-  }
-  .timeline_section {
-    margin-top: 20px;
-    width: 80%;
-    .title {
-      font-size: 30px;
-      font-weight: 750;
-      color: #2c394b;
-    }
-  }
-  .certification_section {
-    width: 80%;
+  .resume_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1224px;
+    justify-content: center;
+    align-items: center;
 
-    .title {
-      font-size: 30px;
-      font-weight: 750;
-      color: #2c394b;
+    .resume_title {
+      p {
+        font-size: 50px;
+        font-weight: 600;
+      }
     }
-    .certification_section_container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    .resume_subtitle {
+      margin-top: 10px;
+      p {
+        text-align: center;
+        color: gray;
+      }
+    }
+    .timeline_section {
+      margin-top: 20px;
+      width: 80%;
+      .title {
+        font-size: 30px;
+        font-weight: 750;
+        color: #2c394b;
+      }
+    }
+    .certification_section {
+      width: 80%;
+
+      .title {
+        font-size: 30px;
+        font-weight: 750;
+        color: #2c394b;
+      }
+      .certification_section_container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
     }
   }
 }

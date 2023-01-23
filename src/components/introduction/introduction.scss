@@ -1,53 +1,60 @@
-.intro_container {
+.intro {
   display: flex;
-  align-items: center;
+  width: 100vw;
   justify-content: center;
-  width: 100%;
-  max-width: 1224px;
-  margin-top: 10%;
-  .intro_left {
-    margin: 0 0 0 5%;
-    .intro_img {
-    }
-  }
-  .intro_right {
-    height: 200px;
+  align-items: center;
+  margin: 10% 0;
+  .intro_container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 0 8% 0 5%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1224px;
 
-    .intro_title {
-      font-size: 40px;
-      font-weight: 700;
-      .profile {
-        padding-right: 5px;
-        color: #2c394b;
+    .intro_left {
+      margin: 0 0 0 5%;
+      .intro_img {
       }
     }
-    .intro_description {
-      color: grey;
-    }
-    .intro_button_container {
+    .intro_right {
+      height: 200px;
       display: flex;
-      flex-direction: row;
-      width: 320px;
+      flex-direction: column;
       justify-content: space-evenly;
-      .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        margin-top: 10px;
-        margin-right: 10px;
-        height: 50px;
-        width: 150px;
-        cursor: pointer;
-        text-decoration: none;
+      margin: 0 8% 0 5%;
+
+      .intro_title {
+        font-size: 40px;
+        font-weight: 700;
+        .profile {
+          padding-right: 5px;
+          color: #2c394b;
+        }
       }
-      a:visited {
-        text-decoration: none;
-        color: black;
+      .intro_description {
+        color: grey;
+      }
+      .intro_button_container {
+        display: flex;
+        flex-direction: row;
+        width: 320px;
+        justify-content: space-evenly;
+        .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+          height: 50px;
+          width: 150px;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        a:visited {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
