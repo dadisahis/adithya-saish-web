@@ -30,5 +30,32 @@
       padding: 0 10px;
       cursor: pointer;
     }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar_container {
+    .navbar_center {
+      display: none;
+    }
+    .navbar_right {
+      padding: 0px 20px;
+      .icon {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        height: 50px;
+        justify-content: space-evenly;
+        .burger {
+          width: 30px;
+          border: 1px solid black;
+        }
+      }
+    }
   }
 }
