@@ -5,7 +5,6 @@
   max-width: 1224px;
   justify-content: center;
   height: 100%;
-  max-height: 350px;
   .timeline_left {
     display: flex;
     justify-content: center;
@@ -51,15 +50,14 @@
       }
     }
     .vl_container {
-      height: 105%;
+      height: 100%;
       width: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
       .vl {
-        height: 280px;
+        height: 100%;
         width: 0%;
-        border: 1.5px solid #227c70;
       }
     }
   }
@@ -97,4 +95,7 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 680) {
 }

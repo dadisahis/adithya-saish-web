@@ -14,6 +14,12 @@
     .intro_left {
       margin: 0 0 0 5%;
       .intro_img {
+        border-radius: 10px;
+        // box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
+        // -webkit-box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
+        // -moz-box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
+        -webkit-box-reflect: below 5px
+          linear-gradient(to bottom, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.4));
       }
     }
     .intro_right {
@@ -21,14 +27,18 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      margin: 0 8% 0 5%;
-
+      margin: 0 0 0 5%;
       .intro_title {
+        display: flex;
         font-size: 40px;
         font-weight: 700;
+        flex-wrap: wrap;
         .profile {
           padding-right: 5px;
           color: #2c394b;
+        }
+        .word {
+          margin-right: 5px;
         }
       }
       .intro_description {
@@ -99,6 +109,11 @@
           height: 300px;
           width: 350px;
           border-radius: 20px;
+          .intro_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
         }
       }
     }

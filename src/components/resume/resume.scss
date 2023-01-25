@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 5%;
+  height: 100%;
   .resume_container {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@
     max-width: 1224px;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
     .resume_title {
       p {
@@ -28,6 +30,7 @@
     .timeline_section {
       margin-top: 20px;
       width: 80%;
+      height: 100%;
       .title {
         font-size: 30px;
         font-weight: 750;
@@ -45,8 +48,9 @@
       .certification_section_container {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
     }
   }

@@ -1,28 +1,77 @@
-import react from "react";
 import "./introduction.scss";
 import human from "../../assets/humanStock.jpg";
+import { motion } from "framer-motion";
 
 function Introduction() {
+  const text = "Hi, I am Adithya Saish. I'm a Full Stack Developer.";
+  const words = text.split(" ");
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+    }),
+  };
+  const children = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "string",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        type: "string",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+
   return (
     <div className="intro">
       <div className="intro_container">
-        <div className="intro_left">
-          <img src={human} alt="" className="intro_img" />
-        </div>
-        <div className="intro_right">
-          <div className="intro_title">
-            <p>
-              Hi, I'm Adithya Saish. I'm a{" "}
-              <span className="profile">Full Stack Developer</span>
-            </p>
-          </div>
-          <div className="intro_description">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="intro_left"
+        >
+          <motion.img src={human} alt="" className="intro_img" />
+        </motion.div>
+        <motion.div
+          className="intro_right"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="intro_title">
+            {words.map((word, ind) => (
+              <motion.p variants={children} className="word">
+                {word}
+              </motion.p>
+            ))}
+          </motion.div>
+          <motion.div
+            variants={container}
+            transition={{ delay: 5 }}
+            className="intro_description"
+          >
             <p>
               I am a Full Stack Developer based on Delhi, India. I have more
               than 1 year of experience and I have a expertise on Python,React.
             </p>
-          </div>
-          <div className="intro_button_container">
+          </motion.div>
+          <motion.div
+            variants={container}
+            transition={{ delay: 5 }}
+            className="intro_button_container"
+          >
             <a
               className="button"
               style={{ background: "black", color: "#ececec" }}
@@ -39,8 +88,8 @@ function Introduction() {
             >
               Github
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
