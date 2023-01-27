@@ -30,7 +30,7 @@ function Home() {
       />
       <div className="home_container">
         <div className="home_intro_section">
-          <Introduction />
+          <Introduction contactMeRef={contactMeRef} handleClick={handleClick} />
 
           <div className="work_section" ref={workRef}>
             <Work />

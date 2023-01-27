@@ -3,7 +3,7 @@ import ProfilePhoto from "../../assets/ProfilePhoto.jpeg";
 import { motion } from "framer-motion";
 import Ripple from "../ripple/Ripple";
 
-function Introduction() {
+function Introduction(props) {
   const text = "Hi 👋, I am Adithya Saish. I'm a Full Stack Developer.";
   const words = text.split(" ");
   const container = {
@@ -76,7 +76,7 @@ function Introduction() {
             <a
               className="button"
               style={{ background: "black", color: "#ececec" }}
-              href="/"
+              onClick={() => props.handleClick(props.contactMeRef)}
             >
               Contact Me
             </a>
