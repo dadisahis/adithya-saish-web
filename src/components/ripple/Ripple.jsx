@@ -90,7 +90,6 @@ function Points() {
   function changeColor() {
     const colorArray = ["#E0144C", "#00ABB3", "#FFCACA", "#F07DEA", "#607EAA"];
     pointRef.current.color.set(colorArray[getRandom(colorArray.length)]);
-    console.log(pointRef.current.color);
     pointRef.current.needsUpdate = true;
   }
   setInterval(changeColor, 2000);

@@ -90,6 +90,23 @@
       }
     }
     .description {
+      margin-top: 1em;
+      h4 {
+        font-weight: 800;
+        font-style: italic;
+        color: #227c70;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li ::before {
+        content: "\2022";
+        color: #227c70;
+        font-weight: 800;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
       p {
         font-size: 14px;
       }
@@ -97,5 +114,33 @@
   }
 }
 
-@media screen and (max-width: 680) {
+@media screen and (max-width: 780px) {
+  .timeline_container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    .timeline_right {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    .timeline_left {
+      margin-top: 1em;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .timeline_center {
+      display: none;
+    }
+    .timeline_right {
+      width: 100%;
+    }
+  }
 }

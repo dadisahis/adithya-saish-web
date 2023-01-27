@@ -4,14 +4,16 @@ import projectData from "../../data/projects.json";
 import ProjectItem from "../projectItem/ProjectItem";
 
 function Work() {
-  console.log(projectData);
   return (
     <div className="work_container">
       <div className="title">
-        <p>Work</p>
+        <p>Work 💻</p>
       </div>
       <div className="subtitle">
-        <p>Check my commercial and non commercial projects.</p>
+        <p>
+          Here are a few of the various side projects that I have worked to make
+          myself an able developer .
+        </p>
         <p>If you have any questions feel free to ask for more information.</p>
       </div>
       <div className="projects">

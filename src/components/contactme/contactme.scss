@@ -41,5 +41,28 @@
         outline: none;
       }
     }
+    .send_container {
+      margin-top: 1em;
+      .send_button {
+        width: 100%;
+        border: 1px solid;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(39, 46, 43);
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .send_button:hover {
+        background-color: rgba(39, 46, 43, 0.677);
+      }
+    }
   }
+}
+.toast_notification {
+  height: 100px;
+  background-color: white;
+  border: 1px black;
+  --toastify-text-color-light: black;
+  --toastify-color-progress-light: black;
 }

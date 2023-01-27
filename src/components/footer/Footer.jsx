@@ -2,6 +2,7 @@ import react from "react";
 import "./footer.scss";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
       <hr />
       <div className="footer_container">
         <div className="footer_left">
-          <p>Adithya Saish</p>
+          <p>Made with ❤️ by Adithya Saish</p>
         </div>
         <div className="footer_right">
           <div className="icon">
@@ -17,6 +18,9 @@ function Footer() {
           </div>
           <div className="icon">
             <GitHubIcon className="" />
+          </div>
+          <div className="icon">
+            <LinkedIn className="" />
           </div>
         </div>
       </div>

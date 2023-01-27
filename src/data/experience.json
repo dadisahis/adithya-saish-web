@@ -1,10 +1,10 @@
 [
   {
-    "id": 1,
-    "company_name": "Superbolter",
-    "profile_name": "Software Developer",
+    "id": 2,
+    "company_name": "Accenture",
+    "profile_name": "Application Development Analyst",
     "year": "2021",
-    "timeline": "June 2020 - July 2021",
+    "timeline": "July 2021 -",
     "location": "Bangalore, India",
     "stack": [
       "python",
@@ -15,18 +15,18 @@
       "socket.io"
     ],
     "experience": [
-      "Set up the complete backend flow of a search and filter system using Python, AWS Lambda, Elasticsearch which helps thousands of end users look for any product they want.",
-      "Successfully Developed a Desktop App which could reverse image search within one's Local Directory using Tensowflow,keras,Kinter GUI and Firebase which saved time for 3D modelling team in looking for models with similar structure. ",
-      "Set up data ingestion pipelines for periodical updation of the catalog with more than 10k records which helped in keeping the data updated at production level using AWS Lambda, Kinesis firehose.",
-      "Set up a multiple object detection cum recommendation system that recommends visually similar products from our catalog for the multiple objects present in a single input image. It enabled end users to get a better idea on how to design a room using our companies product. ",
-      "Set up similar items recommendation system that helps end users to explore similar products which may better fit their purpose."
+      "Working as a full stack developer with ReactJs on the front and python serverless on the backend",
+      "Trained and integrated many multi-class object detection model to production.",
+      "Developed features SSO, Document Management, helped integrate object detection model and Vision OCR to extract information from images and much more for a tool that helps client save millions in legal fees by ensuring right data is there in their products",
+      "Part of the team which developed and deployed full stack web app that helped automate a process which usually took 3-5hr to complete and brought down the total time taken to complete the process to under 5 minutes",
+      "Implemented architecture using Azure App service ,Azure Functions, API Management, Azure Kubernetes Service, Azure Container Registry and integrated CI/CD pipelines for seamless deployement."
     ]
   },
   {
     "id": 2,
     "company_name": "Superbolter",
     "profile_name": "Software Developer",
-    "year": "2021",
+    "year": "2020",
     "timeline": "June 2020 - July 2021",
     "location": "Bangalore, India",
     "stack": [
@@ -38,10 +38,10 @@
       "socket.io"
     ],
     "experience": [
-      "Set up the complete backend flow of a search and filter system using Python, AWS Lambda, Elasticsearch which helps thousands of end users look for any product they want.",
-      "Successfully Developed a Desktop App which could reverse image search within one's Local Directory using Tensowflow,keras,Kinter GUI and Firebase which saved time for 3D modelling team in looking for models with similar structure. ",
-      "Set up data ingestion pipelines for periodical updation of the catalog with more than 10k records which helped in keeping the data updated at production level using AWS Lambda, Kinesis firehose.",
-      "Set up a multiple object detection cum recommendation system that recommends visually similar products from our catalog for the multiple objects present in a single input image. It enabled end users to get a better idea on how to design a room using our companies product. ",
+      "Set up the complete backend flow of a search and filter system which helps thousands of end users look for any product they want.",
+      "Successfully Developed a Desktop App which could reverse image search within one's Local Directory",
+      "Set up data ingestion pipelines for periodical updation of the catalog",
+      "Set up a multiple object detection cum recommendation system that recommends visually similar products from our catalog for the multiple objects present in a single input image.",
       "Set up similar items recommendation system that helps end users to explore similar products which may better fit their purpose."
     ]
   }

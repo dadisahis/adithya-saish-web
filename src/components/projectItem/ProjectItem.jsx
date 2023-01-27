@@ -7,7 +7,7 @@ function ProjectItem(data) {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { type: "tween", delay: 2, stiffness: 10 },
+      transition: { type: "tween", delay: 0.5, stiffness: 10 },
     },
   };
   return (
@@ -32,7 +32,24 @@ function ProjectItem(data) {
       <div className="description_container">
         <p>{data.data.description}</p>
       </div>
-      <div className="button_container"></div>
+      <div className="button_container">
+        <a
+          href={data.data.live_url}
+          target="_blank"
+          rel="noreferer nooperner"
+          style={{ background: "black", color: "#ececec" }}
+        >
+          Live URL
+        </a>
+        <a
+          href={data.data.github_url}
+          target="_blank"
+          rel="noreferer nooperner"
+          style={{ border: "0.5px solid grey" }}
+        >
+          Github URL
+        </a>
+      </div>
     </motion.div>
   );
 }

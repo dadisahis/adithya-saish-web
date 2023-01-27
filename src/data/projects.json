@@ -2,49 +2,28 @@
   {
     "id": 1,
     "name": "Sangeet",
-    "description": "It is a music app made using MERN stack",
+    "description": "Ever wished for a way to connect with fellow listeners in spotify or apple music. Well this app can do that 😉",
     "img_url": "https://raw.githubusercontent.com/dadisahis/sangeet-ui/master/images/Login%20Page.png",
-    "stack": [
-      "python",
-      "react",
-      "mongoDb",
-      "node.js",
-      "express.js",
-      "socket.io"
-    ],
+    "stack": ["react", "mongoDb", "node.js", "express.js", "socket.io"],
     "github_url": "https://github.com/dadisahis/sangeet-ui/tree/e47e59a38b2acc0fde7ab990cf43d6917f376253",
     "live_url": "https://sangeet-music.onrender.com/"
   },
   {
     "id": 2,
-    "name": "Sangeet",
-    "description": "It is a music app made using MERN stack",
-    "img_url": "https://raw.githubusercontent.com/dadisahis/sangeet-ui/e47e59a38b2acc0fde7ab990cf43d6917f376253/images/Play%20Component%20-%201.png",
-    "stack": [
-      "python",
-      "react",
-      "mongoDb",
-      "node.js",
-      "express.js",
-      "socket.io"
-    ],
-    "github_url": "https://github.com/dadisahis/sangeet-ui/tree/e47e59a38b2acc0fde7ab990cf43d6917f376253",
-    "live_url": "https://sangeet-music.onrender.com/"
+    "name": "Travel.com",
+    "description": "This is a MERN stack web-app inspired from booking.com.",
+    "img_url": "https://raw.githubusercontent.com/dadisahis/Travel.com/aad7fc85c295be10cd52cce2b215808fff285afb/images/Home1.png",
+    "stack": ["react", "mongoDb", "node.js", "express.js"],
+    "github_url": "https://github.com/dadisahis/Travel.com",
+    "live_url": "https://travel-com-ui.onrender.com/"
   },
   {
     "id": 3,
-    "name": "Sangeet",
-    "description": "It is a music app made using MERN stack",
-    "img_url": "https://raw.githubusercontent.com/dadisahis/sangeet-ui/e47e59a38b2acc0fde7ab990cf43d6917f376253/images/Play%20Component%20-%201.png",
-    "stack": [
-      "python",
-      "react",
-      "mongoDb",
-      "node.js",
-      "express.js",
-      "socket.io"
-    ],
-    "github_url": "https://github.com/dadisahis/sangeet-ui/tree/e47e59a38b2acc0fde7ab990cf43d6917f376253",
-    "live_url": "https://sangeet-music.onrender.com/"
+    "name": "Facebook UI Clone",
+    "description": "Facebook UI Clone made using React and Firebase",
+    "img_url": "https://raw.githubusercontent.com/dadisahis/facebook-clone/master/main.png",
+    "stack": ["react", "firebase"],
+    "github_url": "https://github.com/dadisahis/facebook-clone",
+    "live_url": "https://facebook-clone-f5f27.web.app/"
   }
 ]

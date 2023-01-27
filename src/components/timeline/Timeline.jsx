@@ -35,9 +35,15 @@ function Timeline(data) {
           </div>
         </div>
         <div className="description">
-          {data.data.experience.map((item) => (
-            <p>{item}</p>
-          ))}
+          <h4>Achievements/Tasks</h4>
+          <ul>
+            {data.data.experience.map((item) => (
+              <li>
+                {" "}
+                <p>{item}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

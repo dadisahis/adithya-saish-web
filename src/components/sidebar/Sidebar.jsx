@@ -2,6 +2,7 @@ import react from "react";
 import "./sidebar.scss";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
 
 function Sidebar(props) {
   return (
@@ -34,6 +35,9 @@ function Sidebar(props) {
             </div>
             <div className="sidebar_icon">
               <GitHubIcon />
+            </div>
+            <div className="sidebar_icon">
+              <LinkedIn />
             </div>
           </div>
         </div>

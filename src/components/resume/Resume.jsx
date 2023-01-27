@@ -9,12 +9,13 @@ function Resume() {
     <div className="resume">
       <div className="resume_container">
         <div className="resume_title">
-          <p>Resume</p>
+          <p>Resume 📄</p>
         </div>
         <div className="resume_subtitle">
           <p>
-            I am sortware dev with more than 1 years of experience in developing
-            innovative solutions that has helped clients and people
+            Here is a timeline of my professional journey as a developer, the
+            projects that I have worked on , the impact my work has made and the
+            certifications I have earned.
           </p>
         </div>
         <div className="timeline_section">

@@ -9,7 +9,6 @@ function AnimatedSphere() {
   function changeColor() {
     const colorArray = ["#E0144C", "#00ABB3", "#FFCACA", "#F07DEA", "#607EAA"];
     sphereRef.current.color.set(colorArray[getRandom(colorArray.length)]);
-    console.log(sphereRef.current.color);
     sphereRef.current.needsUpdate = true;
   }
   setInterval(changeColor, 2000);

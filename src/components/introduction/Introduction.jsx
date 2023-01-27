@@ -1,9 +1,10 @@
 import "./introduction.scss";
 import human from "../../assets/humanStock.jpg";
 import { motion } from "framer-motion";
+import Ripple from "../ripple/Ripple";
 
 function Introduction() {
-  const text = "Hi, I am Adithya Saish. I'm a Full Stack Developer.";
+  const text = "Hi 👋, I am Adithya Saish. I'm a Full Stack Developer.";
   const words = text.split(" ");
   const container = {
     hidden: { opacity: 0 },
@@ -63,8 +64,8 @@ function Introduction() {
             className="intro_description"
           >
             <p>
-              I am a Full Stack Developer based on Delhi, India. I have more
-              than 1 year of experience and I have a expertise on Python,React.
+              I like to code. I am good with Python and Javascript. Apart from
+              that, I am a die hard Chelsea fan and have an amazing music taste.
             </p>
           </motion.div>
           <motion.div

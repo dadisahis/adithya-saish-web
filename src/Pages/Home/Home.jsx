@@ -18,7 +18,6 @@ function Home() {
   const contactMeRef = useRef(null);
 
   const handleClick = (ref) => {
-    console.log("yo");
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
@@ -32,6 +31,7 @@ function Home() {
       <div className="home_container">
         <div className="home_intro_section">
           <Introduction />
+
           <div className="work_section" ref={workRef}>
             <Work />
           </div>
