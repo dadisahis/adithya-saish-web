@@ -45,7 +45,7 @@ function ProjectItem(data) {
           href={data.data.github_url}
           target="_blank"
           rel="noreferer nooperner"
-          style={{ border: "0.5px solid grey" }}
+          style={{ border: "1px solid black" }}
         >
           Github URL
         </a>

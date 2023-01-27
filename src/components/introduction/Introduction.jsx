@@ -82,7 +82,6 @@ function Introduction() {
             </a>
             <a
               className="button"
-              style={{ border: "0.5px solid grey" }}
               target="_blank"
               rel="noreferer nooperner"
               href="https://github.com/dadisahis"

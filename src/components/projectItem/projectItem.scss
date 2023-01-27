@@ -98,5 +98,9 @@
     a {
       width: 80%;
     }
+    a:visited {
+      text-decoration-line: none;
+      color: black;
+    }
   }
 }
