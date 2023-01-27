@@ -13,15 +13,18 @@ function Footer() {
           <p>Made with ❤️ by Adithya Saish</p>
         </div>
         <div className="footer_right">
-          <div className="icon">
+          <a className="icon" href="https://twitter.com/addysaish">
             <TwitterIcon />
-          </div>
-          <div className="icon">
-            <GitHubIcon className="" />
-          </div>
-          <div className="icon">
-            <LinkedIn className="" />
-          </div>
+          </a>
+          <a className="icon" href="https://github.com/dadisahis">
+            <GitHubIcon />
+          </a>
+          <a
+            className="icon"
+            href="https://www.linkedin.com/in/adithya-saish-445506194/"
+          >
+            <LinkedIn />
+          </a>
         </div>
       </div>
     </div>

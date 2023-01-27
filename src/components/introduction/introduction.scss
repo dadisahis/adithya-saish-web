@@ -12,8 +12,9 @@
     max-width: 1224px;
 
     .intro_left {
-      margin: 0 0 0 5%;
+      margin: 0 0 0 15%;
       .intro_img {
+        height: 400px;
         border-radius: 10px;
         // box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
         // -webkit-box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
@@ -120,8 +121,8 @@
         margin-bottom: 50px;
         justify-content: center;
         .intro_img {
-          height: 75%;
-          width: 90%;
+          height: 50%;
+          width: 70%;
           border-radius: 10px;
         }
       }

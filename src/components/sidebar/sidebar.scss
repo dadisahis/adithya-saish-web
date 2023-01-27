@@ -39,6 +39,14 @@
       margin-bottom: 10px;
       border-top: 1px solid grey;
       padding-top: 10px;
+      .sidebar_icon {
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }

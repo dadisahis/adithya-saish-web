@@ -1,5 +1,5 @@
 import "./introduction.scss";
-import human from "../../assets/humanStock.jpg";
+import ProfilePhoto from "../../assets/ProfilePhoto.jpeg";
 import { motion } from "framer-motion";
 import Ripple from "../ripple/Ripple";
 
@@ -43,7 +43,7 @@ function Introduction() {
           animate="visible"
           className="intro_left"
         >
-          <motion.img src={human} alt="" className="intro_img" />
+          <motion.img src={ProfilePhoto} alt="" className="intro_img" />
         </motion.div>
         <motion.div
           className="intro_right"

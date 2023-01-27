@@ -30,15 +30,18 @@ function Sidebar(props) {
             </div>
           </div>
           <div className="sidebar_bottom">
-            <div className="sidebar_icon">
+            <a className="sidebar_icon" href="https://twitter.com/addysaish">
               <TwitterIcon />
-            </div>
-            <div className="sidebar_icon">
+            </a>
+            <a className="sidebar_icon" href="https://github.com/dadisahis">
               <GitHubIcon />
-            </div>
-            <div className="sidebar_icon">
+            </a>
+            <a
+              className="sidebar_icon"
+              href="https://www.linkedin.com/in/adithya-saish-445506194/"
+            >
               <LinkedIn />
-            </div>
+            </a>
           </div>
         </div>
       )}

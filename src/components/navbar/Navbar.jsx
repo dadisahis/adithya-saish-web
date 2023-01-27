@@ -49,15 +49,18 @@ function Navbar(props) {
             />
           </div>
 
-          <div className="icon">
+          <a className="icon" href="https://twitter.com/addysaish">
             <TwitterIcon />
-          </div>
-          <div className="icon">
+          </a>
+          <a className="icon" href="https://github.com/dadisahis">
             <GitHubIcon />
-          </div>
-          <div className="icon">
+          </a>
+          <a
+            className="icon"
+            href="https://www.linkedin.com/in/adithya-saish-445506194/"
+          >
             <LinkedInIcon />
-          </div>
+          </a>
         </div>
       </div>
     </div>
