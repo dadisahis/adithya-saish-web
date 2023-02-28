@@ -3,7 +3,7 @@
   justify-content: center;
   position: fixed;
   z-index: 999;
-  width: 100vw;
+  width: 99%;
   background-color: white;
   .navbar_container {
     display: flex;
@@ -40,6 +40,9 @@
       }
       a:visited {
         text-decoration: none;
+        color: black;
+      }
+      .MuiSvgIcon-root{
         color: black;
       }
       .hamburger {

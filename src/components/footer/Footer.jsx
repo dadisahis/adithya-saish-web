@@ -10,7 +10,7 @@ function Footer() {
       <hr />
       <div className="footer_container">
         <div className="footer_left">
-          <p>Made with ❤️ by Adithya Saish</p>
+          <p>Developed by Adithya Saish</p>
         </div>
         <div className="footer_right">
           <a className="icon" href="https://twitter.com/addysaish">

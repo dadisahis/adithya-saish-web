@@ -19,11 +19,11 @@
   },
   {
     "id": 3,
-    "name": "Facebook UI Clone",
-    "description": "Facebook UI Clone made using React and Firebase",
-    "img_url": "https://raw.githubusercontent.com/dadisahis/facebook-clone/master/main.png",
-    "stack": ["react", "firebase"],
-    "github_url": "https://github.com/dadisahis/facebook-clone",
-    "live_url": "https://facebook-clone-f5f27.web.app/"
+    "name": "Poster Generator",
+    "description": "This is a web app which generates simple posters for small news agencies",
+    "img_url": "https://raw.githubusercontent.com/dadisahis/poster-generator/master/images/Form.PNG?token=GHSAT0AAAAAAB7LX6ITHK4C7JVLCH2QRBH6Y76ICCQ",
+    "stack": ["react", "material-ui"],
+    "github_url": "https://github.com/dadisahis/poster-generator",
+    "live_url": "https://poster-generator-nu.vercel.app/"
   }
 ]
