@@ -14,42 +14,46 @@ function ProjectItem(data) {
     <motion.div
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{once: true}}
       className="project_container"
       whileHover={{ scale: 1.1 }}
     >
-      <div className="img_container">
-        <img src={data.data.img_url} alt="" />
-      </div>
-      <div className="title_container">
-        <p>{data.data.name}</p>
-      </div>
-      <div className="techStack_container">
-        {data.data.stack.map((item) => (
-          <Chip label={item} className="chip" />
-        ))}
-      </div>
-      <div className="description_container">
-        <p>{data.data.description}</p>
-      </div>
+        <div className="img_container">
+          <img src={data.data.img_url} alt="" />
+        </div>
+      <div className="text_container">
       <div className="button_container">
-        <a
-          href={data.data.live_url}
-          target="_blank"
-          rel="noreferer nooperner"
-          style={{ background: "black", color: "#ececec" }}
-        >
-          Live URL
-        </a>
-        <a
-          href={data.data.github_url}
-          target="_blank"
-          rel="noreferer nooperner"
-          style={{ border: "1px solid black" }}
-        >
-          Github URL
-        </a>
-      </div>
+          <a
+            href={data.data.live_url}
+            target="_blank"
+            rel="noreferer nooperner"
+            // style={{ background: "#321F1F", color: "#ececec" }}
+          >
+            {data.data.name}
+          </a>
+          <a
+            href={data.data.github_url}
+            target="_blank"
+            rel="noreferer nooperner"
+            
+          >
+            Github
+          </a>
+        </div>
+        {/* <div className="title_container">
+          <p>{data.data.name}</p>
+        </div> */}
+        <div className="techStack_container">
+          {data.data.stack.map((item) => (
+            <Chip label={item} className="chip" />
+          ))}
+        </div>
+        {/* <div className="description_container">
+          <p>{data.data.description}</p>
+        </div> */}
+        
+        </div>
     </motion.div>
   );
 }

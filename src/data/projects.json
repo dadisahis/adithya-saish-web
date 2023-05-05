@@ -22,7 +22,7 @@
     "name": "Poster Generator",
     "description": "This is a web app which generates simple posters for small news agencies",
     "img_url": "https://raw.githubusercontent.com/dadisahis/poster-generator/master/images/Form.PNG?token=GHSAT0AAAAAAB7LX6ITHK4C7JVLCH2QRBH6Y76ICCQ",
-    "stack": ["react", "material-ui"],
+    "stack": ["react", "material-ui","node-vibrant"],
     "github_url": "https://github.com/dadisahis/poster-generator",
     "live_url": "https://poster-generator-nu.vercel.app/"
   }

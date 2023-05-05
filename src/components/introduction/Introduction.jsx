@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import Ripple from "../ripple/Ripple";
 
 function Introduction(props) {
-  const text = "Hi 👋, I am Adithya Saish. I'm a Full Stack Developer.";
+  const text = `Hello, I am Adithya Saish.`;
   const words = text.split(" ");
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.50, delayChildren: .5 * i },
     }),
   };
   const children = {
@@ -37,26 +37,40 @@ function Introduction(props) {
   return (
     <div className="intro">
       <div className="intro_container">
-        <motion.div
+        {/* <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
           className="intro_left"
         >
           <motion.img src={ProfilePhoto} alt="" className="intro_img" />
-        </motion.div>
+        </motion.div> */}
         <motion.div
           className="intro_right"
           variants={container}
           initial="hidden"
           animate="visible"
         >
+          <motion.div className="gift_button">
+            <a
+              className="button"
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            >
+              Click here for a Gift 🎁
+            </a>
+          </motion.div>
           <motion.div className="intro_title">
-            {words.map((word, ind) => (
+            {/* {words.map((word, ind) => (
               <motion.p variants={children} className="word">
                 {word}
               </motion.p>
-            ))}
+            ))} */}
+            <motion.p>
+              {text}
+            </motion.p>
+            {/* <motion.p className="subtitle" variants={container}>
+              Full Stack Developer.
+            </motion.p> */}
           </motion.div>
           <motion.div
             variants={container}
@@ -64,8 +78,7 @@ function Introduction(props) {
             className="intro_description"
           >
             <p>
-              I like to code. I am good with Python and Javascript. Apart from
-              that, I am a die hard Chelsea fan and have an amazing music taste.
+            I like to code. I am good with Python and Javascript. Apart from that, An emotionally drained Chelsea fan who also happens to  have an amazing music taste.
             </p>
           </motion.div>
           <motion.div
@@ -75,7 +88,7 @@ function Introduction(props) {
           >
             <a
               className="button"
-              style={{ background: "black", color: "#ececec" }}
+              style={{ background: `linear-gradient(265.06deg, rgba(216, 216, 216, 0.4) 2.18%, rgba(216, 216, 216, 0) 89.88%), #499499` }}
               onClick={() => props.handleClick(props.contactMeRef)}
             >
               Contact Me
@@ -94,5 +107,4 @@ function Introduction(props) {
     </div>
   );
 }
-
 export default Introduction;

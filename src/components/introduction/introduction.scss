@@ -3,7 +3,10 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
-  margin: 10% 0;
+  height: 100vh;
+  background: url('../../assets/HeroBackground.png');
+  background-size: 100% 100%;
+
   .intro_container {
     display: flex;
     align-items: center;
@@ -24,16 +27,42 @@
       }
     }
     .intro_right {
-      height: 200px;
+      height: 150px;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-evenly;
-      margin: 0 0 0 5%;
+      width: 100%;
+      .gift_button{
+        .button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50px;
+          margin-bottom: 20px;
+          margin-right: 10px;
+          height: 35px;
+          width: 250px;
+          cursor: pointer;
+          text-decoration: none;
+          color: white;
+          background: rgba(217, 221, 22, 0.3);
+          border: 1px solid #e6d115d8;
+        }
+      }
       .intro_title {
+        color: white;
         display: flex;
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 70px;
+        font-weight: 400;
         flex-wrap: wrap;
+        background: linear-gradient(271.4deg, rgba(132, 128, 128, 0.5) 29.59%, rgba(198, 193, 193, 0) 70.94%), #ecebeb;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        p{
+          white-space: pre-line;
+        }
         .profile {
           padding-right: 5px;
           color: #2c394b;
@@ -41,32 +70,43 @@
         .word {
           margin-right: 5px;
         }
+        .subtitle{
+          width: 80%;
+          text-align: right;
+          margin-left: 20%;
+        }
       }
       .intro_description {
-        color: grey;
+        width: 60%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 300;
+        background: linear-gradient(270.15deg, rgba(250, 246, 246, 0) 2.37%, rgba(250, 246, 246, 0.5) 76.2%), #6EB8BD;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       .intro_button_container {
         display: flex;
         flex-direction: row;
-        width: 320px;
         justify-content: space-evenly;
         .button {
           display: flex;
           justify-content: center;
           align-items: center;
-          border: 1px solid black;
-          border-radius: 10px;
+          border-radius: 50px;
           margin-top: 10px;
           margin-right: 10px;
           height: 50px;
           width: 150px;
           cursor: pointer;
           text-decoration: none;
-          color: black;
+          color: white;
+          background: linear-gradient(113.3deg, rgba(112, 110, 110, 0.2) 24.35%, rgba(112, 110, 110, 0) 86.33%), #2D2929;
         }
         a:visited {
           text-decoration: none;
-          color: black;
+          color: white;
         }
       }
     }
@@ -78,7 +118,6 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-    margin: 15% 0;
     .intro_container {
       display: flex;
       flex-direction: column;
@@ -91,7 +130,6 @@
       }
       .intro_right {
         display: flex;
-        text-align: center;
         margin-top: 10px;
         width: 80%;
         align-items: center;
@@ -102,12 +140,12 @@
             border: 2px solid black;
           }
         }
-        .intro_title {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 35px;
-        }
+        // .intro_title {
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: center;
+        //   font-size: 35px;
+        // }
       }
     }
   }
@@ -115,7 +153,6 @@
 
 @media screen and (max-width: 600px) {
   .intro {
-    margin-top: 20%;
     .intro_container {
       .intro_left {
         display: flex;
@@ -128,12 +165,31 @@
         }
       }
       .intro_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         width: 90%;
         .intro_title {
+          color: white;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 35px;
+          font-size: 45px;
+          font-weight: 500;
+          flex-wrap: wrap;
+          p{
+            white-space: pre-line;
+          }
+          .profile {
+            padding-right: 5px;
+            color: #2c394b;
+          }
+          .word {
+            margin-right: 5px;
+          }
+          .subtitle{
+            width: 100%;
+            text-align: right;
+            margin-left: 20%;
+          }
         }
         .intro_button_container {
           display: flex;

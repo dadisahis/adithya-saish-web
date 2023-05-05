@@ -9,7 +9,7 @@ function Resume() {
     <div className="resume">
       <div className="resume_container">
         <div className="resume_title">
-          <p>Resume 📄</p>
+          <p>Resume</p>
         </div>
         <div className="resume_subtitle">
           <p>

@@ -29,7 +29,7 @@ function Sidebar(props) {
               <p>Contact</p>
             </div>
           </div>
-          <div className="sidebar_bottom">
+          {/* <div className="sidebar_bottom">
             <a className="sidebar_icon" href="https://twitter.com/addysaish">
               <TwitterIcon />
             </a>
@@ -42,7 +42,7 @@ function Sidebar(props) {
             >
               <LinkedIn />
             </a>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

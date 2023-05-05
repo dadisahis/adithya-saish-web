@@ -1,13 +1,33 @@
-import react from "react";
+import react, { useEffect, useRef } from "react";
 import "./work.scss";
 import projectData from "../../data/projects.json";
 import ProjectItem from "../projectItem/ProjectItem";
+import { useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Work() {
+  const workRef = useRef(null)
+  const isInView = useInView(workRef,{once: true, threshold: .2})
+  const animation = useAnimation()
+  useEffect(()=>{
+    if(isInView){
+      animation.start({
+        y:0,
+        height: 'auto',
+        transition:{
+          ease:'easeOut',
+          duration: 1,
+        }
+
+      })
+    }else{
+      animation.start({height: '200vh'})
+    }
+  },[isInView])
   return (
-    <div className="work_container">
+    <motion.div animate={animation} className="work_container" ref={workRef}>
       <div className="title">
-        <p>Work 💻</p>
+        <p>PROJECTS</p>
       </div>
       <div className="subtitle">
         <p>
@@ -21,7 +41,9 @@ function Work() {
           <ProjectItem data={item} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
+
 export default Work;
+
