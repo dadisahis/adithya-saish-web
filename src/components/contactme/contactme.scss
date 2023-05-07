@@ -11,11 +11,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 100%;
     max-width: 1224px;
     h1 {
       font-size: 70px;
+      font-weight: 400;
+      background: linear-gradient(271.4deg, rgba(132, 128, 128, 0.5) 29.59%, rgba(198, 193, 193, 0) 70.94%), #ecebeb;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
     }
     .input_container {
       display: flex;
@@ -29,10 +34,14 @@
         margin-top: 5px;
         padding: 10px;
         outline: none;
-        font-weight: 600;
+        font-weight: 400;
       }
       label {
-        font-weight: 700;
+        font-weight: 400;
+        background: linear-gradient(270.15deg, rgba(250, 246, 246, 0) 2.37%, rgba(250, 246, 246, 0.5) 76.2%), #6EB8BD;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       textarea {
         border: none;
@@ -40,7 +49,7 @@
         margin-top: 5px;
         padding: 10px;
         outline: none;
-        font-weight: 600;
+        font-weight: 400;
       }
     }
     .send_container {
@@ -50,7 +59,7 @@
         border: none;
         height: 50px;
         border-radius: 10px;
-        background-color: rgb(39, 46, 43);
+        background: linear-gradient(265.06deg, rgba(216, 216, 216, 0.4) 2.18%, rgba(216, 216, 216, 0) 89.88%), #499499;
         color: white;
         font-size: 20px;
         cursor: pointer;

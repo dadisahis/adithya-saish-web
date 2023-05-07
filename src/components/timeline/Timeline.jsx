@@ -1,5 +1,6 @@
 import react from "react";
 import "./timeline.scss";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function Timeline(data) {
   return (
@@ -40,6 +41,7 @@ function Timeline(data) {
             {data.data.experience.map((item) => (
               <li>
                 {" "}
+                <CheckCircleIcon />
                 <p>{item}</p>
               </li>
             ))}

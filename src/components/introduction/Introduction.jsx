@@ -2,6 +2,7 @@ import "./introduction.scss";
 import ProfilePhoto from "../../assets/ProfilePhoto.jpeg";
 import { motion } from "framer-motion";
 import Ripple from "../ripple/Ripple";
+import TechStack from "../techStack/TechStack";
 
 function Introduction(props) {
   const text = `Hello, I am Adithya Saish.`;
@@ -55,6 +56,8 @@ function Introduction(props) {
             <a
               className="button"
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noreferer noopener"
             >
               Click here for a Gift 🎁
             </a>
@@ -102,7 +105,11 @@ function Introduction(props) {
               Github
             </a>
           </motion.div>
+          <motion.div className="techstack_container">
+             <TechStack />
+          </motion.div>
         </motion.div>
+        
       </div>
     </div>
   );

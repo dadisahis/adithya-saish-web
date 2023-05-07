@@ -12,7 +12,7 @@ function Navbar(props) {
   const navigate = useNavigate()
   const scrollHandler = ()=>{
     console.log(window.scrollY)
-    if (window.scrollY>100){
+    if (window.scrollY>5){
       setTop(false)
     }
     else{

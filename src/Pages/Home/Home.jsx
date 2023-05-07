@@ -7,6 +7,7 @@ import Resume from "../../components/resume/Resume";
 import "./home.scss";
 import Contactme from "../../components/contactme/Contactme";
 import Footer from "../../components/footer/Footer";
+import TechStack from "../../components/techStack/TechStack";
 function Home() {
   // const [color, setColor] = useState("#E0144C");
   // function getRandom(max) {
@@ -31,7 +32,7 @@ function Home() {
       <div className="home_container">
         <div className="home_intro_section">
           <Introduction contactMeRef={contactMeRef} handleClick={handleClick} />
-
+          
           <div className="work_section" ref={workRef}>
             <Work />
           </div>

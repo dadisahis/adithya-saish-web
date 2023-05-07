@@ -32,7 +32,7 @@ function Work() {
       <div className="subtitle">
         <p>
           Here are a few of the various side projects that I have worked to make
-          myself an able developer .
+          myself an able developer.
         </p>
         <p>If you have any questions feel free to ask for more information.</p>
       </div>

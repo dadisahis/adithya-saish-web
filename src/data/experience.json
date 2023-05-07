@@ -15,17 +15,17 @@
       "socket.io"
     ],
     "experience": [
-      "Working as a full stack developer with ReactJs on the front and python serverless on the backend",
-      "Trained and integrated many multi-class object detection model to production.",
-      "Developed features SSO, Document Management, helped integrate object detection model and Vision OCR to extract information from images and much more for a tool that helps client save millions in legal fees by ensuring right data is there in their products",
-      "Part of the team which developed and deployed full stack web app that helped automate a process which usually took 3-5hr to complete and brought down the total time taken to complete the process to under 5 minutes",
-      "Implemented architecture using Azure App service ,Azure Functions, API Management, Azure Kubernetes Service, Azure Container Registry and integrated CI/CD pipelines for seamless deployement."
+      "Developed and deployed Full Stack Web App in a team of 7 members that automated a process taking 3-5hrs to complete, reducing the total time to under 5 minutes. The tool helps clients save thousands of dollars in legal fees by ensuring correct data in their product artworks.",
+      "Developed UI/UX features using React Typescript, HTML and CSS and hosted on Azure App Service.",
+      "Developed backend APIs using Python in Azure Functions framework , hosted on Azure Kubernetes , with integration to Azure SQL , Azure Cosmos DB, Azure Storage, and GCP Vision API .",
+      "Trained and integrated many multi-class object detection model using GCP AutoML to production.",
+      "Got Fast Track promoted within 1 year and was recognized multiple times for my contribution in the Project."
     ]
   },
   {
     "id": 2,
     "company_name": "Superbolter",
-    "profile_name": "Software Developer",
+    "profile_name": "Software Developer Internship",
     "year": "2020",
     "timeline": "June 2020 - July 2021",
     "location": "Bangalore, India",

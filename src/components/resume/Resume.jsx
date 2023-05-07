@@ -9,7 +9,7 @@ function Resume() {
     <div className="resume">
       <div className="resume_container">
         <div className="resume_title">
-          <p>Resume</p>
+          <p>EXPERIENCE</p>
         </div>
         <div className="resume_subtitle">
           <p>
@@ -19,7 +19,7 @@ function Resume() {
           </p>
         </div>
         <div className="timeline_section">
-          <p className="title">Experience</p>
+          <p className="title">Work History</p>
           {experienceData.map((item) => (
             <Timeline data={item} />
           ))}

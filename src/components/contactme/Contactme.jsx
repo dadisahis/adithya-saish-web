@@ -38,7 +38,7 @@ function Contactme() {
     <div>
       <div className="contact_me">
         <div className="contactme_container">
-          <h1>Contact Me </h1>
+          <h1>CONTACT ME </h1>
           <form className="contactme_form" onSubmit={sendEmail} ref={form}>
             <div className="input_container">
               <label className="full_name_title">Full Name</label>
