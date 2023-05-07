@@ -62,7 +62,10 @@ function Introduction(props) {
               Click here for a Gift 🎁
             </a>
           </motion.div>
-          <motion.div className="intro_title">
+          <motion.div 
+            variants={container}
+            transition={{ delay: 5 }}
+            className="intro_title">
             {/* {words.map((word, ind) => (
               <motion.p variants={children} className="word">
                 {word}
@@ -99,13 +102,16 @@ function Introduction(props) {
             <a
               className="button"
               target="_blank"
-              rel="noreferer nooperner"
+              rel="noreferer noopener"
               href="https://github.com/dadisahis"
             >
               Github
             </a>
           </motion.div>
-          <motion.div className="techstack_container">
+          <motion.div 
+            variants={container}
+            transition={{ delay: 5 }}
+            className="techstack_container">
              <TechStack />
           </motion.div>
         </motion.div>

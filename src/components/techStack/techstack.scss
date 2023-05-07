@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 10px;
     h1{
         font-size: 70px;
         margin-bottom: 20px;
@@ -29,6 +30,7 @@
                 height: 200px;
                 border-radius: 20px;
                 width: 150px;
+                margin: 0 10px;
                 p{
                     font-size: 25px;
                     margin-left: 10px;
@@ -69,7 +71,7 @@
                 flex-direction: row;
                 height: 250px;
                 border-radius: 20px;
-                width: 100%;
+                width: 90%;
                 height: 100%;
                 transition-timing-function : linear;
                 .item{

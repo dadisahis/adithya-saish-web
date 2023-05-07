@@ -39,19 +39,19 @@ function Navbar(props) {
         <div className="navbar_center">
           <div
             className="resume_component"
-            onClick={() => navigate('/resume')}
+            onClick={() => props.handleClick(props.resumeRef)}
           >
             <p>Experience</p>
           </div>
           <div
             className="work_component"
-            onClick={() => navigate('/work')}
+            onClick={() => props.handleClick(props.workRef)}
           >
             <p>Projects</p>
           </div>
           <div
             className="contact_component"
-            onClick={() => navigate('/contactme')}
+            onClick={() =>props.handleClick(props.contactMeRef)}
           >
             <p>Contact</p>
           </div>
