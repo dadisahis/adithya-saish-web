@@ -1,0 +1,24 @@
+.bento{
+    height: fit-content;
+    width: 80%;
+    background: linear-gradient(50deg, #29abbd 1%, #319994 25%, rgb(231, 191, 191) 150%);
+    margin: 10px;
+    border-radius: 20px;
+    padding:30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        text-transform: capitalize;
+    }
+    
+    .bento_container{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

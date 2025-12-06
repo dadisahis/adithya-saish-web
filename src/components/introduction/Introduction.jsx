@@ -3,9 +3,10 @@ import ProfilePhoto from "../../assets/ProfilePhoto.jpeg";
 import { motion } from "framer-motion";
 import Ripple from "../ripple/Ripple";
 import TechStack from "../techStack/TechStack";
+import BentoGrid from "../bentoGrid/BentoGrid";
 
 function Introduction(props) {
-  const text = `Hello, I am Adithya Saish.`;
+  const text = `Hey, I am Adithya Saish.`;
   const words = text.split(" ");
   const container = {
     hidden: { opacity: 0 },
@@ -94,7 +95,7 @@ function Introduction(props) {
           >
             <a
               className="button"
-              style={{ background: `linear-gradient(265.06deg, rgba(216, 216, 216, 0.4) 2.18%, rgba(216, 216, 216, 0) 89.88%), #499499` }}
+              style={{ background: `linear-gradient(265.06deg, rgba(51, 29, 29, 0.4) 2.18%, rgba(216, 216, 216, 0) 89.88%), #dd2f11ff` }}
               onClick={() => props.handleClick(props.contactMeRef)}
             >
               Contact Me
@@ -108,12 +109,12 @@ function Introduction(props) {
               Github
             </a>
           </motion.div>
-          <motion.div 
+          {/* <motion.div 
             variants={container}
             transition={{ delay: 5 }}
             className="techstack_container">
-             <TechStack />
-          </motion.div>
+             <BentoGrid />
+          </motion.div> */}
         </motion.div>
         
       </div>

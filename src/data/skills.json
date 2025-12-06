@@ -1,18 +1,65 @@
 {
-    "skills":[
-        "python",
-        "javascipt",
-        "react.JS",
-        "HTML",
-        "CSS",
-        "SCSS",
-        "serverless",
-        "node.JS",
-        "express.JS",
-        "django",
-        "cosmosdb",
-        "mongodb",
-        "elasticsearch",
-        "AWS",
-        "azure"]
+    "frontend": [
+        {
+            "name": "react",
+            "img_url": "/frontend/react.png"
+        },
+        {
+            "name": "html",
+            "img_url": "/frontend/html.png"
+        },
+        {
+            "name": "CSS",
+            "img_url": "/frontend/css.png"
+        },
+        {
+            "name": "SCSS",
+            "img_url": "/frontend/sass.png"
+        },
+        {
+            "name": "next",
+            "img_url": "/frontend/next.png"
+        }
+    ],
+    "backend":[
+        {
+            "name": "python",
+            "img_url": "/backend/python.png"
+        },
+        {
+            "name": "node",
+            "img_url": "/backend/node.png"
+        },
+        {
+            "name": "django",
+            "img_url": "/backend/django.png"
+        },
+        {
+            "name": "AWS lambda",
+            "img_url": "/backend/lambda.png"
+        },
+        {
+            "name": "azure functions",
+            "img_url": "/backend/functions.png"
+        },
+        {
+            "name": "cosmos DB",
+            "img_url": "/backend/cosmos.png"
+        },
+        {
+            "name": "elasticsearch",
+            "img_url": "/backend/elastic.png"
+        }
+    ],
+    "cloud": [
+        {
+            "name": "AWS",
+            "img_url": "/backend/aws.png"
+        },
+        {
+            "name": "azure",
+            "img_url": "https://swimburger.net/media/ppnn3pcl/azure.png"
+        }
+    ]
+
 }

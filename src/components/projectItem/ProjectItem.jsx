@@ -1,8 +1,9 @@
-import react from "react";
+import react, { useState } from "react";
 import "./projectItem.scss";
 import { Chip } from "@mui/material";
 import { delay, motion } from "framer-motion";
 function ProjectItem(data) {
+  const [open,setOpen] = useState(false)
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,8 +20,17 @@ function ProjectItem(data) {
       className="project_container"
       whileHover={{ scale: 1.1 }}
     >
-        <div className="img_container">
-          <img src={data.data.img_url} alt="" />
+        <div className="img_parent_container" onMouseEnter={()=> setOpen(true)} onMouseLeave={()=> setOpen(false)}>
+            <div className="img_container" >
+            <img src={data.data.img_url} alt="" />
+            </div>
+            {
+            open && 
+            <div className="description_container">
+              <p>{data.data.description}</p>
+            </div>
+            }
+          
         </div>
       <div className="text_container">
       <div className="button_container">
@@ -49,9 +59,7 @@ function ProjectItem(data) {
             <Chip label={item} className="chip" />
           ))}
         </div>
-        {/* <div className="description_container">
-          <p>{data.data.description}</p>
-        </div> */}
+        
         
         </div>
     </motion.div>
