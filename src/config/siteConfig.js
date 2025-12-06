@@ -3,10 +3,10 @@ const siteConfig = {
     description: "Personal website and portfolio",
     author: "Adithya Saish",
     links: {
-        github: "https://github.com/yourusername",
-        linkedin: "https://linkedin.com/in/yourusername",
-        twitter: "https://twitter.com/yourusername",
-        email: "mailto:your@email.com"
+        github: "https://github.com/dadisahis",
+        linkedin: "https://linkedin.com/in/adithya-saish-445506194",
+        leetcode: "https://leetcode.com/u/dadi_sahis99/",
+        email: "mailto:adithya.work99@gmail.com"
     },
     sections: [
         { id: "about", title: "About" },

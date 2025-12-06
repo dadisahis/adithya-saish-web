@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.scss";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import LeetCodeIcon from "../icons/LeetCodeIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Sidebar from "../sidebar/Sidebar"; // You might need to update Sidebar too if it uses refs
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import siteConfig from "../../config/siteConfig";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -61,15 +62,15 @@ function Navbar() {
             {/* Sidebar needs to be updated to handle Links as well, or just hide it for now if not used */}
             <Sidebar open={open} setOpen={setOpen} />
           </div>
-          <a className="icon" href="https://twitter.com/addysaish" target="_blank" rel="noreferrer">
-            <TwitterIcon />
+          <a className="icon" href={siteConfig.links.leetcode} target="_blank" rel="noreferrer">
+            <LeetCodeIcon />
           </a>
-          <a className="icon" href="https://github.com/dadisahis" target="_blank" rel="noreferrer">
+          <a className="icon" href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <GitHubIcon />
           </a>
           <a
             className="icon"
-            href="https://www.linkedin.com/in/adithya-saish-445506194/"
+            href={siteConfig.links.linkedin}
             target="_blank"
             rel="noreferrer"
           >

@@ -11,11 +11,15 @@ import SchoolIcon from '@mui/icons-material/School';
 import { useNavigate } from "react-router-dom";
 import ProfilePic from "../../assets/ProfilePic.jpg";
 import Avatar from '@mui/material/Avatar';
+import LeetCodeIcon from "../icons/LeetCodeIcon";
+
+import experienceData from "../../data/experience.json";
 
 function Introduction() {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const email = siteConfig.links.email.replace('mailto:', 'adithya.work99@gmail.com');
+  const currentRole = experienceData[0];
 
   const handleCopyEmail = (e) => {
     e.stopPropagation();
@@ -71,8 +75,7 @@ function Introduction() {
                 <h2>Hello, I'm {siteConfig.title}</h2>
               </div>
               <p className="intro-text">
-                Full Stack Developer. Python & JS Enthusiast.
-                Chelsea Fan. Music Lover.
+                Full Stack Developer | Backend Development | Distrubuted Systems | Emotionally Drained Chelsea Fan
               </p>
             </div>
             <div className="profile-pic-container">
@@ -111,10 +114,10 @@ function Introduction() {
               <WorkIcon className="work-icon" />
               <div>
                 <h3>Current Role</h3>
-                <p>Software Engineer @ TechCorp</p>
+                <p>{currentRole.profile_name} @ {currentRole.company_name}</p>
               </div>
             </div>
-            <p className="work-date">2023 - Present</p>
+            <p className="work-date">{currentRole.timeline}</p>
           </div>
         </motion.div>
 
@@ -125,9 +128,11 @@ function Introduction() {
         >
           <div className="card-content">
             <h3>Connect</h3>
+
             <div className="profiles-links">
               <a href={siteConfig.links.github} target="_blank" rel="noreferrer"><GitHubIcon /></a>
               <a href={siteConfig.links.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+              <a href={siteConfig.links.leetcode} target="_blank" rel="noreferrer"><LeetCodeIcon /></a>
             </div>
             <div className="email-container" onClick={handleCopyEmail}>
               <ContentCopyIcon fontSize="small" /> <span>{copied ? "Copied!" : "adithya.work99@gmail.com"}</span>

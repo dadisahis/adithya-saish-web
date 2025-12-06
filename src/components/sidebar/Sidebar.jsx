@@ -1,8 +1,9 @@
 import react from "react";
 import "./sidebar.scss";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import LeetCodeIcon from "../icons/LeetCodeIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
+import siteConfig from "../../config/siteConfig";
 
 function Sidebar(props) {
   return (
@@ -30,15 +31,15 @@ function Sidebar(props) {
             </div>
           </div>
           {/* <div className="sidebar_bottom">
-            <a className="sidebar_icon" href="https://twitter.com/addysaish">
-              <TwitterIcon />
+            <a className="sidebar_icon" href={siteConfig.links.leetcode}>
+              <LeetCodeIcon />
             </a>
-            <a className="sidebar_icon" href="https://github.com/dadisahis">
+            <a className="sidebar_icon" href={siteConfig.links.github}>
               <GitHubIcon />
             </a>
             <a
               className="sidebar_icon"
-              href="https://www.linkedin.com/in/adithya-saish-445506194/"
+              href={siteConfig.links.linkedin}
             >
               <LinkedIn />
             </a>
