@@ -45,24 +45,6 @@ function Introduction() {
     <div className="bento-intro">
       <div className="bento-grid">
 
-        {/* 1. Top Left: Skills (Small) */}
-        <motion.div
-          className="bento-card skills-card"
-          whileHover={{ scale: 1.02 }}
-          onClick={() => navigate('/skills')}
-        >
-          <div className="card-content">
-            <h3>Skills</h3>
-            <div className="skills-preview">
-              {skills.slice(0, 9).map((skill, index) => (
-                <div key={index} className="skill-avatar" title={skill.name}>
-                  <img src={process.env.PUBLIC_URL + skill.path} alt={skill.name} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
         {/* 2. Top Right: Intro (Wide) */}
         <motion.div
           className="bento-card intro-card"
@@ -87,6 +69,26 @@ function Introduction() {
             </div>
           </div>
         </motion.div>
+
+        {/* 1. Top Left: Skills (Small) */}
+        <motion.div
+          className="bento-card skills-card"
+          whileHover={{ scale: 1.02 }}
+          onClick={() => navigate('/skills')}
+        >
+          <div className="card-content">
+            <h3>Skills</h3>
+            <div className="skills-preview">
+              {skills.slice(0, 9).map((skill, index) => (
+                <div key={index} className="skill-avatar" title={skill.name}>
+                  <img src={process.env.PUBLIC_URL + skill.path} alt={skill.name} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+
 
         {/* 3. Bottom Left: Projects */}
         <motion.div
