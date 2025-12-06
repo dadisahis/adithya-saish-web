@@ -9,7 +9,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 import { useNavigate } from "react-router-dom";
-import ProfilePic from "../../assets/ProfilePic.jpg";
+import ProfilePic from "../../assets/ProfilePic2.jpg";
 import Avatar from '@mui/material/Avatar';
 import LeetCodeIcon from "../icons/LeetCodeIcon";
 
