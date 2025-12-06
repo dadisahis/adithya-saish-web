@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "company": "TechCorp",
+        "role": "Software Engineer",
+        "date": "2023 - Present",
+        "description": "Developing scalable web applications using React and Node.js. optimizing frontend performance and implementing new features.",
+        "logo": "/backend/node.png"
+    },
+    {
+        "id": 2,
+        "company": "Startup Inc",
+        "role": "Junior Developer",
+        "date": "2021 - 2023",
+        "description": "Assisted in building the MVP for a fintech product. Worked with Python and Django for backend services.",
+        "logo": "/backend/python.png"
+    },
+    {
+        "id": 3,
+        "company": "Web Solutions",
+        "role": "Intern",
+        "date": "2020 - 2021",
+        "description": "Learned full-stack development basics. Contributed to internal tools and documentation.",
+        "logo": "/frontend/html.png"
+    }
+]

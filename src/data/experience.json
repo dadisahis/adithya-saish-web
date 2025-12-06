@@ -1,5 +1,32 @@
 [
   {
+    "id": 3,
+    "company_name": "American Express GBT",
+    "profile_name": "Engineer-2",
+    "year": "2023",
+    "timeline": "September 2023 - Present",
+    "location": "Gurgaon, India",
+    "stack": [
+      "Next.js",
+      "Fast API",
+      "Python",
+      "Postgres",
+      "AWS",
+      "Kafka",
+      "Redshift",
+      "Tableau",
+      "Embedding"
+    ],
+    "experience": [
+      "Developing a modern analytics platform in collaboration with product and design teams, enabling users to create dashboards and reports in under 5 minutes, replacing legacy BI tools and enhancing decision-making.",
+      "Leading the development of a core reporting module with features such as custom report creation, query generation, and advanced access management, resulting in 80% faster performance and enhanced downloads (128k to 1M records).",
+      "Designed and implemented scalable, event-driven microservices for notifications and data exports using cloud-native technologies like AWS MSK (Kafka) and Lambda.",
+      "Led the creation of administrative and access management tools, integrating User Management and RBAC for secure platform operations.",
+      "Built automation tools to streamline presentation generation, reducing a manual process from weeks to under 15 minutes by integrating real-time Redshift data.",
+      "Received the Power Performer Award (2024) for contributions to team success and innovation."
+    ]
+  },
+  {
     "id": 2,
     "company_name": "Accenture",
     "profile_name": "Application Development Analyst",
@@ -15,15 +42,15 @@
       "socket.io"
     ],
     "experience": [
-      "Developed and deployed Full Stack Web App in a team of 7 members that automated a process taking 3-5hrs to complete, reducing the total time to under 5 minutes. The tool helps clients save thousands of dollars in legal fees by ensuring correct data in their product artworks.",
-      "Developed UI/UX features using React Typescript, HTML and CSS and hosted on Azure App Service.",
-      "Developed backend APIs using Python in Azure Functions framework , hosted on Azure Kubernetes , with integration to Azure SQL , Azure Cosmos DB, Azure Storage, and GCP Vision API .",
-      "Trained and integrated many multi-class object detection model using GCP AutoML to production.",
-      "Got Fast Track promoted within 1 year and was recognized multiple times for my contribution in the Project."
+      "Developed and deployed a full-stack web application that automated a 3-5 hour process to under 5 minutes, helping clients save thousands of dollars in legal fees by ensuring data accuracy.",
+      "Developed UI/UX features using modern frontend technologies and hosted on Azure App Service.",
+      "Developed backend APIs using Python in Azure Functions framework, hosted on Azure Kubernetes, integrating with Azure SQL, Cosmos DB, and GCP Vision API.",
+      "Trained and integrated multi-class object detection models using GCP AutoML into production environments.",
+      "Fast-tracked promoted within 1 year and recognized multiple times for key contributions to the project."
     ]
   },
   {
-    "id": 2,
+    "id": 1,
     "company_name": "Superbolter",
     "profile_name": "Software Developer Internship",
     "year": "2020",
@@ -38,11 +65,11 @@
       "socket.io"
     ],
     "experience": [
-      "Set up the complete backend flow of a search and filter system which helps thousands of end users look for any product they want.",
-      "Successfully Developed a Desktop App which could reverse image search within one's Local Directory",
-      "Set up data ingestion pipelines for periodical updation of the catalog",
-      "Set up a multiple object detection cum recommendation system that recommends visually similar products from our catalog for the multiple objects present in a single input image.",
-      "Set up similar items recommendation system that helps end users to explore similar products which may better fit their purpose."
+      "Set up the complete backend flow for a search and filter system to improve product discovery for thousands of users.",
+      "Developed a desktop application for local directory image search.",
+      "Established data ingestion pipelines for periodic catalog updates.",
+      "Implemented a multiple object detection and recommendation system to suggest visually similar products.",
+      "Set up a recommendation engine to help users explore relevant products based on their preferences."
     ]
   }
 ]

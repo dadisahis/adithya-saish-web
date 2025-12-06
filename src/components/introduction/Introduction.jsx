@@ -1,124 +1,150 @@
+import React, { useState } from "react";
 import "./introduction.scss";
-import ProfilePhoto from "../../assets/ProfilePhoto.jpeg";
 import { motion } from "framer-motion";
-import Ripple from "../ripple/Ripple";
-import TechStack from "../techStack/TechStack";
-import BentoGrid from "../bentoGrid/BentoGrid";
+import siteConfig from "../../config/siteConfig";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import CodeIcon from '@mui/icons-material/Code';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import { useNavigate } from "react-router-dom";
+import ProfilePic from "../../assets/ProfilePic.jpg";
+import Avatar from '@mui/material/Avatar';
 
-function Introduction(props) {
-  const text = `Hey, I am Adithya Saish.`;
-  const words = text.split(" ");
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.50, delayChildren: .5 * i },
-    }),
+function Introduction() {
+  const navigate = useNavigate();
+  const [copied, setCopied] = useState(false);
+  const email = siteConfig.links.email.replace('mailto:', 'adithya.work99@gmail.com');
+
+  const handleCopyEmail = (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
-  const children = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "string",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        type: "string",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  };
+
+  const skills = [
+    { name: 'React', path: '/frontend/react.png' },
+    { name: 'Next.js', path: '/frontend/next.png' },
+    { name: 'Node.js', path: '/backend/node.png' },
+    { name: 'Python', path: '/backend/python.png' },
+    { name: 'AWS', path: '/backend/aws.png' },
+    { name: 'Django', path: '/backend/django.png' },
+    { name: 'Sass', path: '/frontend/sass.png' },
+    { name: 'HTML', path: '/frontend/html.png' },
+    { name: 'CSS', path: '/frontend/css.png' },
+    { name: 'Lambda', path: '/backend/lambda.png' },
+  ];
 
   return (
-    <div className="intro">
-      <div className="intro_container">
-        {/* <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="intro_left"
-        >
-          <motion.img src={ProfilePhoto} alt="" className="intro_img" />
-        </motion.div> */}
+    <div className="bento-intro">
+      <div className="bento-grid">
+
+        {/* 1. Top Left: Skills (Small) */}
         <motion.div
-          className="intro_right"
-          variants={container}
-          initial="hidden"
-          animate="visible"
+          className="bento-card skills-card"
+          whileHover={{ scale: 1.02 }}
+          onClick={() => navigate('/skills')}
         >
-          <motion.div className="gift_button">
-            <a
-              className="button"
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              target="_blank"
-              rel="noreferer noopener"
-            >
-              Click here for a Gift 🎁
-            </a>
-          </motion.div>
-          <motion.div 
-            variants={container}
-            transition={{ delay: 5 }}
-            className="intro_title">
-            {/* {words.map((word, ind) => (
-              <motion.p variants={children} className="word">
-                {word}
-              </motion.p>
-            ))} */}
-            <motion.p>
-              {text}
-            </motion.p>
-            {/* <motion.p className="subtitle" variants={container}>
-              Full Stack Developer.
-            </motion.p> */}
-          </motion.div>
-          <motion.div
-            variants={container}
-            transition={{ delay: 5 }}
-            className="intro_description"
-          >
-            <p>
-            I like to code. I am good with Python and Javascript. Apart from that, An emotionally drained Chelsea fan who also happens to  have an amazing music taste.
-            </p>
-          </motion.div>
-          <motion.div
-            variants={container}
-            transition={{ delay: 5 }}
-            className="intro_button_container"
-          >
-            <a
-              className="button"
-              style={{ background: `linear-gradient(265.06deg, rgba(51, 29, 29, 0.4) 2.18%, rgba(216, 216, 216, 0) 89.88%), #dd2f11ff` }}
-              onClick={() => props.handleClick(props.contactMeRef)}
-            >
-              Contact Me
-            </a>
-            <a
-              className="button"
-              target="_blank"
-              rel="noreferer noopener"
-              href="https://github.com/dadisahis"
-            >
-              Github
-            </a>
-          </motion.div>
-          {/* <motion.div 
-            variants={container}
-            transition={{ delay: 5 }}
-            className="techstack_container">
-             <BentoGrid />
-          </motion.div> */}
+          <div className="card-content">
+            <h3>Skills</h3>
+            <div className="skills-preview">
+              {skills.slice(0, 9).map((skill, index) => (
+                <div key={index} className="skill-avatar" title={skill.name}>
+                  <img src={process.env.PUBLIC_URL + skill.path} alt={skill.name} />
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
-        
+
+        {/* 2. Top Right: Intro (Wide) */}
+        <motion.div
+          className="bento-card intro-card"
+          whileHover={{ scale: 1.01 }}
+        >
+          <div className="card-content intro-content">
+            <div className="intro-text-content">
+              <div className="intro-header">
+                <span className="icon">👋</span>
+                <h2>Hello, I'm {siteConfig.title}</h2>
+              </div>
+              <p className="intro-text">
+                Full Stack Developer. Python & JS Enthusiast.
+                Chelsea Fan. Music Lover.
+              </p>
+            </div>
+            <div className="profile-pic-container">
+              <Avatar
+                alt="Adithya Saish"
+                src={ProfilePic}
+                sx={{ width: 120, height: 120, border: '2px solid rgba(255, 255, 255, 0.2)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* 3. Bottom Left: Projects */}
+        <motion.div
+          className="bento-card projects-card"
+          whileHover={{ scale: 1.02 }}
+          onClick={() => navigate('/projects')}
+        >
+          <div className="card-content">
+            <div className="icon-wrapper">
+              <CodeIcon fontSize="medium" />
+            </div>
+            <h3>Projects</h3>
+            <p>Check out my work</p>
+          </div>
+        </motion.div>
+
+        {/* 4. Bottom Middle: Work Experience */}
+        <motion.div
+          className="bento-card work-card"
+          whileHover={{ scale: 1.02 }}
+          onClick={() => navigate('/work')}
+        >
+          <div className="card-content">
+            <div className="work-header">
+              <WorkIcon className="work-icon" />
+              <div>
+                <h3>Current Role</h3>
+                <p>Software Engineer @ TechCorp</p>
+              </div>
+            </div>
+            <p className="work-date">2023 - Present</p>
+          </div>
+        </motion.div>
+
+        {/* 5. Bottom Right: Connect (with Email) */}
+        <motion.div
+          className="bento-card profiles-card"
+          whileHover={{ scale: 1.02 }}
+        >
+          <div className="card-content">
+            <h3>Connect</h3>
+            <div className="profiles-links">
+              <a href={siteConfig.links.github} target="_blank" rel="noreferrer"><GitHubIcon /></a>
+              <a href={siteConfig.links.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            </div>
+            <div className="email-container" onClick={handleCopyEmail}>
+              <ContentCopyIcon fontSize="small" /> <span>{copied ? "Copied!" : "adithya.work99@gmail.com"}</span>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
+
+      <div className="floating-orbs">
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
+      </div>
+      <div className="horizon-light"></div>
     </div>
   );
 }
+
 export default Introduction;

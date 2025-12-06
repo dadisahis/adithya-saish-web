@@ -1,212 +1,360 @@
-.intro {
+.bento-intro {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  width: 100vw;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  // background: url('../../assets/HeroBackground.png');
-  // background-size: 100% 100%;
-  background: black;
-  background: rgb(5,5,5);
-background: linear-gradient(41deg, rgba(5,5,5,1) 24%, rgba(97,24,24,1) 76%);
-  
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px 40px;
 
-  
-  .intro_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .horizon-light {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 400px;
+    background: radial-gradient(ellipse at center bottom, rgba(138, 43, 226, 0.5) 0%, rgba(138, 43, 226, 0) 70%);
+    filter: blur(60px);
+    animation: horizonPulse 6s ease-in-out infinite alternate;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .floating-orbs {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1024px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 
-    .intro_left {
-      margin: 0 0 0 0;
-      .intro_img {
-        height: 400px;
-        border-radius: 10px;
-        // box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
-        // -webkit-box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
-        // -moz-box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.4);
-        -webkit-box-reflect: below 5px
-          linear-gradient(to bottom, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.4));
-      }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: floatRandom 20s infinite alternate ease-in-out;
     }
-    .intro_right {
-      height: 150px;
+
+    .orb-1 {
+      width: 300px;
+      height: 300px;
+      background: rgba(138, 43, 226, 0.3);
+      top: 10%;
+      left: 10%;
+      animation-duration: 25s;
+    }
+
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: rgba(75, 0, 130, 0.2);
+      bottom: 20%;
+      right: 10%;
+      animation-duration: 30s;
+      animation-delay: -5s;
+    }
+
+    .orb-3 {
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 191, 255, 0.2);
+      top: 40%;
+      left: 40%;
+      animation-duration: 22s;
+      animation-delay: -10s;
+    }
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: 1.2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    z-index: 10;
+
+    .bento-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: 20px;
-      width: 100%;
-      .gift_button{
-        .button{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50px;
-          margin-bottom: 20px;
-          margin-right: 10px;
-          height: 35px;
-          width: 250px;
-          cursor: pointer;
-          text-decoration: none;
-          color: white;
-          background: rgba(217, 221, 22, 0.3);
-          border: 1px solid #e6d115d8;
-        }
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       }
-      .intro_title {
-        color: white;
+
+      .card-content {
+        height: 100%;
         display: flex;
-        font-size: 70px;
-        font-weight: 500;
-        flex-wrap: wrap;
-        background: linear-gradient(271.4deg, rgba(132, 128, 128, 0.5) 29.59%, rgba(198, 193, 193, 0) 70.94%), #ecebeb;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-align: center;
-        p{
-          white-space: pre-line;
-        }
-        .profile {
-          padding-right: 5px;
-          color: #2c394b;
-        }
-        .word {
-          margin-right: 5px;
-        }
-        .subtitle{
-          width: 80%;
-          text-align: right;
-          margin-left: 20%;
-        }
+        flex-direction: column;
+        justify-content: space-between;
       }
-      .intro_description {
-        width: 80%;
-        text-align: center;
+    }
+
+    /* 1. Skills Card */
+    .skills-card {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+
+      h3 {
         font-size: 20px;
-        font-weight: 400;
-        background: linear-gradient(270.15deg, rgba(250, 246, 246, 0) 2.37%, rgba(250, 246, 246, 0.5) 76.2%), #5e6464;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #fff;
+        margin-bottom: 15px;
       }
-      .techstack_container{
-        width: 100%;
-        
-        
-      }
-      .intro_button_container {
+
+      .skills-preview {
         display: flex;
-        flex-direction: row;
-        z-index: 99;
-        justify-content: space-evenly;
-        .button {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+
+        .skill-avatar {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
           display: flex;
-          justify-content: center;
           align-items: center;
-          border-radius: 20px;
-          margin-top: 10px;
-          margin-right: 10px;
-          height: 50px;
-          width: 150px;
-          font-size: 18px;
-          font-weight: 300;
-          cursor: pointer;
-          text-decoration: none;
-          color: rgb(8, 6, 6);
-          background: linear-gradient(113.3deg, rgba(112, 110, 110, 0.2) 24.35%, rgba(112, 110, 110, 0) 86.33%), #2D2929;
-        }
-        a:visited {
-          text-decoration: none;
-          color: white;
+          justify-content: center;
+          padding: 8px;
+          transition: all 0.4s ease;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+          &:hover {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            animation: liquidBlob 3s ease-in-out infinite;
+          }
         }
       }
     }
-  }
-}
-@media screen and (max-width: 1024px) {
-  .intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .intro_container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 1224px;
-      .intro_left {
-        margin: 0 0 0 0;
-      }
-      .intro_right {
-        height: 150px;
-        display: flex;
-        flex-direction: column;
+
+    /* 2. Intro Card */
+    .intro-card {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+
+      .intro-content {
+        flex-direction: row !important;
         align-items: center;
-        justify-content: space-evenly;
-        width: 100%;
-        .intro_description {
-          width: 80%;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .intro-text-content {
+        flex: 1;
+      }
+
+      .intro-header {
+        .icon {
+          font-size: 40px;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          font-size: 32px;
+          font-weight: 700;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+      }
+
+      .intro-text {
+        font-size: 16px;
+        color: #ccc;
+        line-height: 1.5;
+      }
+
+      .profile-pic-container {
+        flex-shrink: 0;
+        /* Avatar styles handled by MUI sx prop */
+      }
+    }
+
+    /* 3. Projects Card */
+    .projects-card {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      .icon-wrapper {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #aaa;
+      }
+    }
+
+    /* 4. Work Card */
+    .work-card {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
+      .work-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+
+        .work-icon {
+          font-size: 36px;
+          color: #a855f7;
+        }
+
+        h3 {
+          font-size: 18px;
+          color: #fff;
+          margin: 0;
+        }
+
+        p {
+          font-size: 14px;
+          color: #ccc;
+          margin: 0;
+        }
+      }
+
+      .work-date {
+        font-size: 14px;
+        color: #888;
+        margin-top: auto;
+      }
+    }
+
+    /* 5. Profiles/Connect Card */
+    .profiles-card {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+
+      h3 {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+
+      .profiles-links {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        a {
+          color: #fff;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 8px;
+          border-radius: 10px;
+          display: flex;
+          transition: background 0.2s;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+
+      .email-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ccc;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 600px) {
-  .intro {
-    .intro_container {
-      .intro_left {
-        display: flex;
-        margin-bottom: 50px;
-        justify-content: center;
-        .intro_img {
-          height: 50%;
-          width: 70%;
-          border-radius: 10px;
-        }
-      }
-      .intro_right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 90%;
-        .intro_title {
-          color: white;
-          display: flex;
-          font-size: 50px;
-          // font-weight: 500;
-          flex-wrap: wrap;
-          p{
-            white-space: pre-line;
-          }
-          .profile {
-            padding-right: 5px;
-            color: #2c394b;
-          }
-          .word {
-            margin-right: 5px;
-          }
-          .subtitle{
-            width: 100%;
-            text-align: right;
-            margin-left: 20%;
-          }
-        }
-        .intro_description{
-          font-size: 18px;
-          width: 90%;
-        }
-        .intro_button_container {
-          display: flex;
-          .button {
-            width: 130px;
-          }
-        }
+@keyframes horizonPulse {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-50%) scaleY(1);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scaleY(1.2);
+  }
+}
+
+@keyframes liquidBlob {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes floatRandom {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-30px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(20px, 60px) scale(1.05);
+  }
+}
+
+@media (max-width: 1024px) {
+  .bento-intro {
+    height: auto;
+    padding: 120px 20px 60px;
+
+    .bento-grid {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      .bento-card {
+        min-height: 180px;
       }
     }
   }
