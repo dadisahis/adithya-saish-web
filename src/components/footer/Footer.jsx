@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import "./footer.scss";
 import LeetCodeIcon from "../icons/LeetCodeIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -14,16 +14,13 @@ function Footer() {
           <p>Developed by Adithya Saish</p>
         </div>
         <div className="footer_right">
-          <a className="icon" href={siteConfig.links.leetcode}>
+          <a className="icon" href={siteConfig.links.leetcode} target="_blank" rel="noreferrer">
             <LeetCodeIcon />
           </a>
-          <a className="icon" href={siteConfig.links.github}>
+          <a className="icon" href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <GitHubIcon />
           </a>
-          <a
-            className="icon"
-            href={siteConfig.links.linkedin}
-          >
+          <a className="icon" href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
             <LinkedIn />
           </a>
         </div>

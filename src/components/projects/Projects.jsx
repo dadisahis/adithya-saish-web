@@ -56,6 +56,7 @@ function Projects() {
                                         </div>
                                     </div>
                                     <p className="description">{project.description}</p>
+                                    <p className="stack-label">TECH STACK</p>
                                     <div className="tech-stack">
                                         {project.stack.map((tech, i) => (
                                             <span key={i} className="tech-tag">{tech}</span>

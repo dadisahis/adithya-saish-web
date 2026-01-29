@@ -1,18 +1,8 @@
 @import './variables.css';
 
-/* Load Roboto from Google Fonts (preconnect is handled by index.html if needed) */
+/* Load fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-@import './variables.css';
-
-/* Load Roboto from Google Fonts (preconnect is handled by index.html if needed) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -21,12 +11,11 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-main);
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition: background-color 0.3s ease, color 0.3s ease;
     min-height: 100vh;
 }
 

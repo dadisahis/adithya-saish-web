@@ -48,6 +48,7 @@ const TimelineItem = ({ job, index }) => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
+              <p className="tech-stack-label">Tech Stack</p>
               <div className="tech-stack">
                 {job.stack.map((tech, i) => (
                   <span key={i} className="tech-tag">{tech}</span>

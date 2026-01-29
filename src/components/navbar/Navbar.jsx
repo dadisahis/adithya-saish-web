@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.scss";
-import LeetCodeIcon from "../icons/LeetCodeIcon";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Sidebar from "../sidebar/Sidebar"; // You might need to update Sidebar too if it uses refs
+import MenuIcon from "@mui/icons-material/Menu";
+import Sidebar from "../sidebar/Sidebar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import siteConfig from "../../config/siteConfig";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,54 +25,41 @@ function Navbar() {
     };
   }, []);
 
-  // Helper to check active route
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className={scrolled ? "navbar blur" : "navbar"}>
+    <div className={scrolled ? "navbar scrolled" : "navbar"}>
       <div className="navbar_container">
+        {/* Left: Logo */}
         <div className="navbar_left">
           <div className="logo" onClick={() => navigate("/")}>
-            <h1>AS</h1>
+            <span>AS.</span>
           </div>
         </div>
-        <div className="navbar_center">
-          <Link to="/" className={`link ${isActive("/") ? "active" : ""}`}>
-            <p>Home</p>
-          </Link>
 
-          <Link to="/work" className={`link ${isActive("/work") ? "active" : ""}`}>
-            <p>Work</p>
-          </Link>
-          <Link to="/projects" className={`link ${isActive("/projects") ? "active" : ""}`}>
-            <p>Projects</p>
-          </Link>
-          <Link to="/skills" className={`link ${isActive("/skills") ? "active" : ""}`}>
-            <p>Skills</p>
-          </Link>
-        </div>
+        {/* Right: Navigation Links (Desktop) + Hamburger (Mobile) */}
         <div className="navbar_right">
-          <div className="hamburger" onClick={() => setOpen(!open)}>
-            <div className="burger"></div>
-            <div className="burger"></div>
-            <div className="burger"></div>
-            {/* Sidebar needs to be updated to handle Links as well, or just hide it for now if not used */}
-            <Sidebar open={open} setOpen={setOpen} />
+          {/* Navigation Links - Desktop only */}
+          <div className="nav-links">
+            <Link to="/" className={`nav-link ${isActive("/") ? "active" : ""}`}>
+              Home
+            </Link>
+            <Link to="/work" className={`nav-link ${isActive("/work") ? "active" : ""}`}>
+              Work
+            </Link>
+            <Link to="/projects" className={`nav-link ${isActive("/projects") ? "active" : ""}`}>
+              Projects
+            </Link>
+            <Link to="/skills" className={`nav-link ${isActive("/skills") ? "active" : ""}`}>
+              Skills
+            </Link>
           </div>
-          <a className="icon" href={siteConfig.links.leetcode} target="_blank" rel="noreferrer">
-            <LeetCodeIcon />
-          </a>
-          <a className="icon" href={siteConfig.links.github} target="_blank" rel="noreferrer">
-            <GitHubIcon />
-          </a>
-          <a
-            className="icon"
-            href={siteConfig.links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedInIcon />
-          </a>
+
+          {/* Hamburger - Mobile only */}
+          <div className="hamburger" onClick={() => setOpen(!open)}>
+            <MenuIcon />
+          </div>
+          <Sidebar open={open} setOpen={setOpen} />
         </div>
       </div>
     </div>

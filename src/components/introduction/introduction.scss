@@ -1,360 +1,447 @@
-.bento-intro {
+/* Editorial Landing Page Styles */
+
+.editorial-intro {
   width: 100%;
   min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 100px 40px 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #000000;
-  position: relative;
+  align-items: flex-start;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1px;
+  width: 100%;
+  max-width: 1400px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   overflow: hidden;
-  padding: 100px 20px 40px;
+}
 
-  .horizon-light {
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150%;
-    height: 400px;
-    background: radial-gradient(ellipse at center bottom, rgba(138, 43, 226, 0.5) 0%, rgba(138, 43, 226, 0) 70%);
-    filter: blur(60px);
-    animation: horizonPulse 6s ease-in-out infinite alternate;
-    z-index: 0;
-    pointer-events: none;
+.card {
+  background: #0a0a0a;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #111;
   }
 
-  .floating-orbs {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+
+/* Hero Card - Spans left side (wider) */
+.hero-card {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  padding: 0;
+  /* No padding for full-bleed photo */
+  min-height: 500px;
+  overflow: hidden;
+
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     height: 100%;
-    pointer-events: none;
-    z-index: 0;
+  }
 
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.4;
-      animation: floatRandom 20s infinite alternate ease-in-out;
-    }
+  .hero-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+  }
 
-    .orb-1 {
-      width: 300px;
-      height: 300px;
-      background: rgba(138, 43, 226, 0.3);
-      top: 10%;
-      left: 10%;
-      animation-duration: 25s;
-    }
+  .hero-photo {
+    flex: 0 0 33.33%;
+    /* 1/3 of the card width */
+    height: auto;
+    /* Let flex stretch handle height */
+    position: relative;
+    /* No margin needed as parent padding is 0 */
 
-    .orb-2 {
-      width: 400px;
-      height: 400px;
-      background: rgba(75, 0, 130, 0.2);
-      bottom: 20%;
-      right: 10%;
-      animation-duration: 30s;
-      animation-delay: -5s;
-    }
-
-    .orb-3 {
-      width: 200px;
-      height: 200px;
-      background: rgba(0, 191, 255, 0.2);
-      top: 40%;
-      left: 40%;
-      animation-duration: 22s;
-      animation-delay: -10s;
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
     }
   }
 
-  .bento-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    gap: 20px;
-    width: 100%;
-    max-width: 1100px;
-    height: 500px;
-    z-index: 10;
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    /* Match connect links */
+    font-style: italic;
+    line-height: 1.1;
+    margin-bottom: 40px;
 
-    .bento-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 24px;
-      cursor: pointer;
-      transition: all 0.3s ease;
+    .line1 {
+      font-family: 'Playfair Display', serif;
+      display: block;
+      font-size: 48px;
+      /* Smaller intro */
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 10px;
+    }
+
+    .line2 {
+      font-family: 'Playfair Display', serif;
+      display: block;
+      font-size: 68px;
+      /* Name */
+      color: #fff;
+    }
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+
+  .location {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Arsenal Card - Top right */
+.arsenal-card {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  justify-content: space-between;
+
+  .skills-columns {
+    display: flex;
+    gap: 60px;
+    flex: 1;
+    align-items: center;
+  }
+
+  .skills-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .skill-item {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .footer-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: auto;
+  }
+}
+
+/* Status Card - Middle right */
+.status-card {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  justify-content: flex-start;
+  gap: 10px;
+
+  .role-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .role-company {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+  }
+
+  .role-date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    margin-top: 5px;
+  }
+}
+
+/* Selected Works Card - Bottom left */
+.works-card {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background: #1a1f1a;
+  /* Muted olive/green accent */
+
+  .works-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .works-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+  }
+
+  .tags {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+
+    .tag {
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+/* Social Card - Bottom middle */
+.social-card {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  background: #fdfbf7 !important;
+  color: #0a0a0a;
+  justify-content: space-between;
+  padding: 30px;
+
+  &:hover {
+    background: #fdfbf7 !important;
+  }
+
+  .label {
+    color: rgba(10, 10, 10, 0.5);
+    /* Use dark text for label */
+  }
+
+  .links-list {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal alignment */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    .link-item {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      color: #0a0a0a;
+      transition: opacity 0.2s;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        opacity: 0.7;
       }
 
-      .card-content {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-    }
-
-    /* 1. Skills Card */
-    .skills-card {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-
-      h3 {
+      .link-text {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-style: italic;
         font-size: 20px;
-        color: #fff;
-        margin-bottom: 15px;
+        /* Slightly smaller for horizontal fit */
+        letter-spacing: -0.5px;
       }
 
-      .skills-preview {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-
-        .skill-avatar {
-          width: 45px;
-          height: 45px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.1);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 8px;
-          transition: all 0.4s ease;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
-
-          &:hover {
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-            animation: liquidBlob 3s ease-in-out infinite;
-          }
-        }
-      }
-    }
-
-    /* 2. Intro Card */
-    .intro-card {
-      grid-column: 2 / 4;
-      grid-row: 1 / 2;
-
-      .intro-content {
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      .intro-text-content {
-        flex: 1;
-      }
-
-      .intro-header {
-        .icon {
-          font-size: 40px;
-          display: block;
-          margin-bottom: 10px;
-        }
-
-        h2 {
-          font-size: 32px;
-          font-weight: 700;
-          color: #fff;
-          margin-bottom: 10px;
-        }
-      }
-
-      .intro-text {
-        font-size: 16px;
-        color: #ccc;
-        line-height: 1.5;
-      }
-
-      .profile-pic-container {
-        flex-shrink: 0;
-        /* Avatar styles handled by MUI sx prop */
-      }
-    }
-
-    /* 3. Projects Card */
-    .projects-card {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-
-      .icon-wrapper {
-        color: #fff;
-        margin-bottom: 10px;
-      }
-
-      h3 {
-        font-size: 20px;
-        color: #fff;
-        margin-bottom: 5px;
-      }
-
-      p {
-        font-size: 14px;
-        color: #aaa;
-      }
-    }
-
-    /* 4. Work Card */
-    .work-card {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-
-      .work-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 10px;
-
-        .work-icon {
-          font-size: 36px;
-          color: #a855f7;
-        }
-
-        h3 {
-          font-size: 18px;
-          color: #fff;
-          margin: 0;
-        }
-
-        p {
-          font-size: 14px;
-          color: #ccc;
-          margin: 0;
-        }
-      }
-
-      .work-date {
-        font-size: 14px;
-        color: #888;
-        margin-top: auto;
-      }
-    }
-
-    /* 5. Profiles/Connect Card */
-    .profiles-card {
-      grid-column: 3 / 4;
-      grid-row: 2 / 3;
-
-      h3 {
+      .arrow {
         font-size: 18px;
-        color: #fff;
-        margin-bottom: 15px;
+        font-weight: 300;
       }
+    }
+  }
 
-      .profiles-links {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 20px;
+  .inquiries-section {
+    margin-top: auto;
 
-        a {
-          color: #fff;
-          background: rgba(255, 255, 255, 0.1);
-          padding: 8px;
-          border-radius: 10px;
-          display: flex;
-          transition: background 0.2s;
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(10, 10, 10, 0.1);
+      margin-bottom: 20px;
+    }
 
-          &:hover {
-            background: rgba(255, 255, 255, 0.2);
-          }
-        }
-      }
+    .sub-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: rgba(10, 10, 10, 0.5);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
 
-      .email-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #ccc;
+    .email-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .email-link {
         font-size: 14px;
-        cursor: pointer;
+        font-weight: 500;
+        color: #0a0a0a;
+        text-decoration: none;
 
         &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .copy-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: rgba(10, 10, 10, 0.5);
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #0a0a0a;
+        }
+
+        .copied-tooltip {
+          position: absolute;
+          top: -25px;
+          right: 0;
+          background: #0a0a0a;
           color: #fff;
+          font-size: 10px;
+          padding: 4px 8px;
+          border-radius: 4px;
+          white-space: nowrap;
         }
       }
     }
   }
 }
 
-@keyframes horizonPulse {
-  0% {
-    opacity: 0.4;
-    transform: translateX(-50%) scaleY(1);
-  }
-
-  100% {
-    opacity: 0.7;
-    transform: translateX(-50%) scaleY(1.2);
-  }
+/* Accent Card - Bottom right */
+.accent-card {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  background: #1a1a1a;
+  min-height: 200px;
 }
 
-@keyframes liquidBlob {
-  0% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-  }
-
-  100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-}
-
-@keyframes floatRandom {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  33% {
-    transform: translate(50px, -50px) scale(1.1);
-  }
-
-  66% {
-    transform: translate(-30px, 20px) scale(0.9);
-  }
-
-  100% {
-    transform: translate(20px, 60px) scale(1.05);
-  }
-}
-
+/* Responsive */
 @media (max-width: 1024px) {
-  .bento-intro {
-    height: auto;
-    padding: 120px 20px 60px;
+  .editorial-intro {
+    padding: 100px 20px 40px;
+  }
 
-    .bento-grid {
-      display: flex;
-      flex-direction: column;
-      height: auto;
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 
-      .bento-card {
-        min-height: 180px;
+  .hero-card,
+  .arsenal-card,
+  .status-card,
+  .works-card,
+  .social-card,
+  .accent-card {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .hero-card {
+    min-height: auto;
+
+    .hero-title {
+
+      .line1,
+      .line2 {
+        font-size: 48px;
+      }
+    }
+  }
+
+  .arsenal-card .skills-columns {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .editorial-intro {
+    padding: 80px 15px 30px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .hero-card .hero-title {
+
+    .line1,
+    .line2 {
+      font-size: 36px;
+    }
+  }
+
+  .social-card .social-icons {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Mobile Hero Layout: Photo Top, Text Bottom */
+  .hero-card {
+    .hero-content {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    .hero-photo {
+      flex: none;
+      width: 100%;
+      height: 300px;
+      /* Fixed height for mobile */
+
+      .profile-img {
+        object-position: center 20%;
+        /* Adjust focus */
+      }
+    }
+
+    .hero-text {
+      padding: 30px 20px;
+      text-align: center;
+      align-items: center;
+      /* Center flex items */
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }

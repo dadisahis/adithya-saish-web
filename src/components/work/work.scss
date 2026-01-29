@@ -1,40 +1,28 @@
 .work-page-container {
   min-height: 100vh;
   width: 100%;
-  background-color: #000000;
-  padding: 40px 20px;
+  background-color: #0a0a0a;
+  padding: 100px 20px 40px;
+  /* Aligned with introduction padding */
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 
-  /* Background Gradient Effect */
-  &::before {
-    content: '';
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-    filter: blur(80px);
-    z-index: 0;
-    pointer-events: none;
-  }
-
   .back-button {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 40px;
+    left: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     font-size: 14px;
     z-index: 20;
     transition: color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &:hover {
       color: #fff;
@@ -43,20 +31,24 @@
 
   .work-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     z-index: 10;
-    margin-top: 40px;
+    margin-top: 20px;
 
     h1 {
-      font-size: 48px;
-      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-style: italic;
+      font-weight: 500;
       color: #fff;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 18px;
-      color: #ccc;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
   }
 
@@ -65,58 +57,57 @@
     width: 100%;
     max-width: 800px;
     padding-left: 40px;
-    /* Space for line */
     padding-bottom: 100px;
-    /* Space for scrolling past last item */
 
     .timeline-line {
       position: absolute;
       top: 0;
       left: 19px;
-      /* Center of marker */
-      width: 2px;
+      width: 1px;
       height: 100%;
       background: rgba(255, 255, 255, 0.1);
+      /* Subtle line */
       z-index: 0;
     }
 
     .timeline-item {
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       z-index: 1;
 
       .timeline-marker {
         position: absolute;
         top: 30px;
-        left: -26px;
-        /* Align with line */
-        width: 12px;
-        height: 12px;
-        background: #a855f7;
+        left: -25px;
+        /* Center on 1px line */
+        width: 9px;
+        height: 9px;
+        background: #0a0a0a;
+        border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 50%;
-        box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.2);
         transition: all 0.3s ease;
       }
 
       &.expanded .timeline-marker {
         background: #fff;
-        box-shadow: 0 0 0 6px rgba(168, 85, 247, 0.4);
-        transform: scale(1.2);
+        border-color: #fff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       }
 
       .timeline-content {
         .card-glass {
-          background: rgba(255, 255, 255, 0.03);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          border-radius: 16px;
-          padding: 24px;
+          background: #0a0a0a;
+          /* Solid dark background */
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 8px;
+          /* Sharper corners for editorial feel */
+          padding: 30px;
           transition: all 0.5s ease;
           overflow: hidden;
 
           &:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            background: #111;
           }
 
           .job-header {
@@ -127,8 +118,9 @@
             .company-logo {
               width: 50px;
               height: 50px;
-              background: linear-gradient(135deg, #a855f7, #7c3aed);
-              border-radius: 12px;
+              background: rgba(255, 255, 255, 0.05);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              border-radius: 8px;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -139,62 +131,78 @@
               flex: 1;
 
               h2 {
-                font-size: 20px;
+                font-family: 'Playfair Display', serif;
+                font-size: 24px;
+                font-style: italic;
+                font-weight: 500;
                 color: #fff;
                 margin-bottom: 4px;
               }
 
               h3 {
-                font-size: 16px;
-                color: #ccc;
-                font-weight: 500;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 400;
                 margin-bottom: 4px;
+                letter-spacing: 0.5px;
               }
 
               .job-date {
-                font-size: 14px;
-                color: #888;
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.4);
                 display: block;
+                letter-spacing: 1px;
+                text-transform: uppercase;
               }
             }
           }
 
           .job-details {
             overflow: hidden;
-            /* Essential for height animation */
 
             .details-content {
-              padding-top: 20px;
+              padding-top: 25px;
               border-top: 1px solid rgba(255, 255, 255, 0.1);
-              margin-top: 20px;
+              margin-top: 25px;
 
               .location {
-                font-size: 14px;
-                color: #aaa;
-                margin-bottom: 15px;
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.4);
+                margin-bottom: 20px;
                 font-style: italic;
+                font-family: 'Playfair Display', serif;
               }
 
               .experience-list {
                 list-style-type: none;
                 padding: 0;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
 
                 li {
                   position: relative;
                   padding-left: 20px;
-                  margin-bottom: 10px;
-                  color: #ddd;
+                  margin-bottom: 12px;
+                  color: rgba(255, 255, 255, 0.8);
                   font-size: 15px;
-                  line-height: 1.6;
+                  line-height: 1.7;
+                  font-weight: 300;
 
                   &::before {
                     content: '•';
                     position: absolute;
                     left: 0;
-                    color: #a855f7;
+                    color: rgba(255, 255, 255, 0.3);
                   }
                 }
+              }
+
+              .tech-stack-label {
+                font-size: 10px;
+                color: rgba(255, 255, 255, 0.4);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+                display: block;
               }
 
               .tech-stack {
@@ -203,12 +211,20 @@
                 gap: 8px;
 
                 .tech-tag {
-                  background: rgba(168, 85, 247, 0.15);
-                  color: #d8b4fe;
-                  padding: 4px 12px;
-                  border-radius: 12px;
-                  font-size: 12px;
-                  border: 1px solid rgba(168, 85, 247, 0.3);
+                  background: rgba(255, 255, 255, 0.05);
+                  color: rgba(255, 255, 255, 0.7);
+                  padding: 6px 14px;
+                  border-radius: 4px;
+                  font-size: 11px;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                  letter-spacing: 0.5px;
+                  transition: all 0.2s;
+
+                  &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                    border-color: rgba(255, 255, 255, 0.3);
+                  }
                 }
               }
             }
@@ -221,7 +237,7 @@
 
 @media (max-width: 768px) {
   .work-page-container {
-    padding: 20px;
+    padding: 100px 20px 40px;
 
     .work-timeline {
       padding-left: 20px;
@@ -232,7 +248,7 @@
 
       .timeline-item {
         .timeline-marker {
-          left: -16px;
+          left: -14px;
         }
 
         .timeline-content {
@@ -244,7 +260,7 @@
               align-items: flex-start;
 
               .company-logo {
-                margin-bottom: 10px;
+                margin-bottom: 15px;
               }
             }
           }
